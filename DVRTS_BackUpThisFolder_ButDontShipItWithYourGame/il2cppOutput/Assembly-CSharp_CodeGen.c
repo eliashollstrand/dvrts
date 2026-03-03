@@ -7,8 +7,12 @@
 
 
 
-extern void DartSetCenterOfMass_Start_mACBF0CC56FE617C2D32B3D44399B31DAFBA964DA (void);
-extern void DartSetCenterOfMass__ctor_m2934B087FABAF48500C9901D5909B5FD7DD3DD2D (void);
+extern void Dart_Start_m1C67A80A537307329FAA623F7A2A42D0E1DF3CD2 (void);
+extern void Dart_OnCollisionEnter_m082D729D35D2B74B64CCBB16C79EC9A8206DABA1 (void);
+extern void Dart__ctor_m0435C308CC7A271A6A56CC4334A110D106CDB4BD (void);
+extern void DartZone_Awake_mE87212B6CFEB8753401A97F39830F3AA200A59FC (void);
+extern void DartZone_SetScoreFromName_m25BFD5891DD9022CD3B6BAC92F167E0546CCD766 (void);
+extern void DartZone__ctor_m66E5ABEDCA1BDE88CA4448ECE7ADC0EA6596AB46 (void);
 extern void UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_mBEB95BEB954BB63E9710BBC7AD5E78C4CB0A0033 (void);
 extern void UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_mE70FB23ACC1EA12ABC948AA22C2E78B2D0AA39B1 (void);
 extern void AnchorVisuals_Start_m84A5BBC02FFBE8BF40D0A3E2D7B36D1FD701DED6 (void);
@@ -158,10 +162,14 @@ extern void XRPokeFollowAffordanceFill_OnTransformTweenableVariableUpdated_m8B3C
 extern void XRPokeFollowAffordanceFill_OnPokeStrengthChanged_m480B681A9BE7B6C71724392FC3368A029EA4CED6 (void);
 extern void XRPokeFollowAffordanceFill_OnPokeStateDataUpdated_m6233708D9CEEA9A7920B821FDBD306F4D7CBFAE6 (void);
 extern void XRPokeFollowAffordanceFill__ctor_mAED1746F6E90C5676967671BFBB11E3B7C6B1E98 (void);
-static Il2CppMethodPointer s_methodPointers[151] = 
+static Il2CppMethodPointer s_methodPointers[155] = 
 {
-	DartSetCenterOfMass_Start_mACBF0CC56FE617C2D32B3D44399B31DAFBA964DA,
-	DartSetCenterOfMass__ctor_m2934B087FABAF48500C9901D5909B5FD7DD3DD2D,
+	Dart_Start_m1C67A80A537307329FAA623F7A2A42D0E1DF3CD2,
+	Dart_OnCollisionEnter_m082D729D35D2B74B64CCBB16C79EC9A8206DABA1,
+	Dart__ctor_m0435C308CC7A271A6A56CC4334A110D106CDB4BD,
+	DartZone_Awake_mE87212B6CFEB8753401A97F39830F3AA200A59FC,
+	DartZone_SetScoreFromName_m25BFD5891DD9022CD3B6BAC92F167E0546CCD766,
+	DartZone__ctor_m66E5ABEDCA1BDE88CA4448ECE7ADC0EA6596AB46,
 	UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_mBEB95BEB954BB63E9710BBC7AD5E78C4CB0A0033,
 	UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_mE70FB23ACC1EA12ABC948AA22C2E78B2D0AA39B1,
 	AnchorVisuals_Start_m84A5BBC02FFBE8BF40D0A3E2D7B36D1FD701DED6,
@@ -318,13 +326,17 @@ extern void TrackedRotation_SetBaseFromVector_m0CAD68507FD5C7AA3C7CAE09720645F03
 extern void TrackedRotation_SetTargetFromVector_m42F1586C38A41E0FB628220D326B1572BB8F80D7_AdjustorThunk (void);
 static Il2CppTokenAdjustorThunkPair s_adjustorThunks[4] = 
 {
-	{ 0x0600007B, TrackedRotation_get_totalOffset_mC129829FFE6CDD96C8885030BDAEF40D569F06C8_AdjustorThunk },
-	{ 0x0600007C, TrackedRotation_Reset_m54545DE2D01827833956AEC4324C136A0CB72425_AdjustorThunk },
-	{ 0x0600007D, TrackedRotation_SetBaseFromVector_m0CAD68507FD5C7AA3C7CAE09720645F033F1D26E_AdjustorThunk },
-	{ 0x0600007E, TrackedRotation_SetTargetFromVector_m42F1586C38A41E0FB628220D326B1572BB8F80D7_AdjustorThunk },
+	{ 0x0600007F, TrackedRotation_get_totalOffset_mC129829FFE6CDD96C8885030BDAEF40D569F06C8_AdjustorThunk },
+	{ 0x06000080, TrackedRotation_Reset_m54545DE2D01827833956AEC4324C136A0CB72425_AdjustorThunk },
+	{ 0x06000081, TrackedRotation_SetBaseFromVector_m0CAD68507FD5C7AA3C7CAE09720645F033F1D26E_AdjustorThunk },
+	{ 0x06000082, TrackedRotation_SetTargetFromVector_m42F1586C38A41E0FB628220D326B1572BB8F80D7_AdjustorThunk },
 };
-static const int32_t s_InvokerIndices[151] = 
+static const int32_t s_InvokerIndices[155] = 
 {
+	15748,
+	11956,
+	15748,
+	15748,
 	15748,
 	15748,
 	27137,
@@ -481,7 +493,7 @@ IL2CPP_EXTERN_C const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule;
 const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule = 
 {
 	"Assembly-CSharp.dll",
-	151,
+	155,
 	s_methodPointers,
 	4,
 	s_adjustorThunks,
