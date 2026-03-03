@@ -8,11 +8,10 @@
 
 
 extern void DartCollision_Awake_m18BE20D3C2AB4CDD72E4B095E13413615729A667 (void);
+extern void DartCollision_OnDestroy_mAF949F997C3C7B00917CA05A147CC577EACC86C0 (void);
+extern void DartCollision_OnGrab_m568779C633DBE38346AE2538E89A668B98540254 (void);
 extern void DartCollision_OnCollisionEnter_m370C48B622B142D217DA2BFF21A1CB87BB91792B (void);
 extern void DartCollision__ctor_mCD703C922798DE1C6F2D05A5A4EA4F736018E375 (void);
-extern void DartTip_Awake_m6F6FE388A438DF4A4141D15471C432AE4AC540FD (void);
-extern void DartTip_OnCollisionEnter_mC284E5D62815D130DFE6B4444B2A302C9A5835A6 (void);
-extern void DartTip__ctor_m3C3B088B9542DF9B1911C8A30B8BD88BB110FB49 (void);
 extern void DartZone_Awake_mE87212B6CFEB8753401A97F39830F3AA200A59FC (void);
 extern void DartZone_SetScoreFromName_m25BFD5891DD9022CD3B6BAC92F167E0546CCD766 (void);
 extern void DartZone__ctor_m66E5ABEDCA1BDE88CA4448ECE7ADC0EA6596AB46 (void);
@@ -175,14 +174,13 @@ extern void XRPokeFollowAffordanceFill_OnTransformTweenableVariableUpdated_m8B3C
 extern void XRPokeFollowAffordanceFill_OnPokeStrengthChanged_m480B681A9BE7B6C71724392FC3368A029EA4CED6 (void);
 extern void XRPokeFollowAffordanceFill_OnPokeStateDataUpdated_m6233708D9CEEA9A7920B821FDBD306F4D7CBFAE6 (void);
 extern void XRPokeFollowAffordanceFill__ctor_mAED1746F6E90C5676967671BFBB11E3B7C6B1E98 (void);
-static Il2CppMethodPointer s_methodPointers[168] = 
+static Il2CppMethodPointer s_methodPointers[167] = 
 {
 	DartCollision_Awake_m18BE20D3C2AB4CDD72E4B095E13413615729A667,
+	DartCollision_OnDestroy_mAF949F997C3C7B00917CA05A147CC577EACC86C0,
+	DartCollision_OnGrab_m568779C633DBE38346AE2538E89A668B98540254,
 	DartCollision_OnCollisionEnter_m370C48B622B142D217DA2BFF21A1CB87BB91792B,
 	DartCollision__ctor_mCD703C922798DE1C6F2D05A5A4EA4F736018E375,
-	DartTip_Awake_m6F6FE388A438DF4A4141D15471C432AE4AC540FD,
-	DartTip_OnCollisionEnter_mC284E5D62815D130DFE6B4444B2A302C9A5835A6,
-	DartTip__ctor_m3C3B088B9542DF9B1911C8A30B8BD88BB110FB49,
 	DartZone_Awake_mE87212B6CFEB8753401A97F39830F3AA200A59FC,
 	DartZone_SetScoreFromName_m25BFD5891DD9022CD3B6BAC92F167E0546CCD766,
 	DartZone__ctor_m66E5ABEDCA1BDE88CA4448ECE7ADC0EA6596AB46,
@@ -352,17 +350,16 @@ extern void TrackedRotation_SetBaseFromVector_m0CAD68507FD5C7AA3C7CAE09720645F03
 extern void TrackedRotation_SetTargetFromVector_m42F1586C38A41E0FB628220D326B1572BB8F80D7_AdjustorThunk (void);
 static Il2CppTokenAdjustorThunkPair s_adjustorThunks[4] = 
 {
-	{ 0x0600008C, TrackedRotation_get_totalOffset_mC129829FFE6CDD96C8885030BDAEF40D569F06C8_AdjustorThunk },
-	{ 0x0600008D, TrackedRotation_Reset_m54545DE2D01827833956AEC4324C136A0CB72425_AdjustorThunk },
-	{ 0x0600008E, TrackedRotation_SetBaseFromVector_m0CAD68507FD5C7AA3C7CAE09720645F033F1D26E_AdjustorThunk },
-	{ 0x0600008F, TrackedRotation_SetTargetFromVector_m42F1586C38A41E0FB628220D326B1572BB8F80D7_AdjustorThunk },
+	{ 0x0600008B, TrackedRotation_get_totalOffset_mC129829FFE6CDD96C8885030BDAEF40D569F06C8_AdjustorThunk },
+	{ 0x0600008C, TrackedRotation_Reset_m54545DE2D01827833956AEC4324C136A0CB72425_AdjustorThunk },
+	{ 0x0600008D, TrackedRotation_SetBaseFromVector_m0CAD68507FD5C7AA3C7CAE09720645F033F1D26E_AdjustorThunk },
+	{ 0x0600008E, TrackedRotation_SetTargetFromVector_m42F1586C38A41E0FB628220D326B1572BB8F80D7_AdjustorThunk },
 };
-static const int32_t s_InvokerIndices[168] = 
+static const int32_t s_InvokerIndices[167] = 
 {
 	15748,
+	15748,
 	11956,
-	15748,
-	15748,
 	11956,
 	15748,
 	15748,
@@ -532,7 +529,7 @@ IL2CPP_EXTERN_C const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule;
 const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule = 
 {
 	"Assembly-CSharp.dll",
-	168,
+	167,
 	s_methodPointers,
 	4,
 	s_adjustorThunks,

@@ -1,14 +1,38 @@
 using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit;
 
 public class DartCollision : MonoBehaviour
 {
-    public Transform tip; // assign the tip
+    public Transform tip;
+
     private Rigidbody rb;
+    private UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable grab;
     private bool hasStuck = false;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
+        grab = GetComponent<UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable>();
+
+        grab.selectEntered.AddListener(OnGrab);
+    }
+
+    private void OnDestroy()
+    {
+        grab.selectEntered.RemoveListener(OnGrab);
+    }
+
+    private void OnGrab(SelectEnterEventArgs args)
+    {
+        // Detach from board
+        transform.SetParent(null);
+
+        // Unfreeze physics
+        rb.constraints = RigidbodyConstraints.None;
+
+        hasStuck = false;
+
+        Debug.Log("Dart grabbed and ready to throw again");
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -22,7 +46,6 @@ public class DartCollision : MonoBehaviour
         Vector3 dartDirection = rb.linearVelocity.normalized;
         Vector3 contactNormal = collision.contacts[0].normal;
         float dot = Vector3.Dot(dartDirection, contactNormal);
-        Debug.Log($"Hit dot product: {dot}");
 
         if (dot < -0.7f)
         {
@@ -43,10 +66,6 @@ public class DartCollision : MonoBehaviour
             transform.SetParent(zone.transform);
 
             Debug.Log($"Dart stuck to {collision.gameObject.name}");
-        }
-        else
-        {
-            Debug.Log("Glancing hit, bouncing");
         }
     }
 }
