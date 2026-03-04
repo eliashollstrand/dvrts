@@ -1142,6 +1142,37 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 628073126006780329, guid: ba1f3fc725ab147b3afaf76731cec84d, type: 3}
+--- !u!1 &518962037
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 518962038}
+  m_Layer: 0
+  m_Name: SpawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &518962038
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 518962037}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 885296243}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &541819727 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -531736008005009593, guid: ba1f3fc725ab147b3afaf76731cec84d, type: 3}
@@ -1375,6 +1406,53 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -6365173201925196543, guid: ba1f3fc725ab147b3afaf76731cec84d, type: 3}
+--- !u!1 &885296241
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 885296243}
+  - component: {fileID: 885296242}
+  m_Layer: 0
+  m_Name: Cup
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &885296242
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 885296241}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb1ac0572c7bc4ccd9a9b6198377e963, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DartSpawner
+  dartPrefab: {fileID: 6038701444003939367, guid: 0f2c78fcae3c04fa7b66ed92ea90737c, type: 3}
+  spawnPoint: {fileID: 518962038}
+--- !u!4 &885296243
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 885296241}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.57957, y: 1.0422, z: -0.0155}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 518962038}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &903031560 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 797769924188111944, guid: ba1f3fc725ab147b3afaf76731cec84d, type: 3}
@@ -3917,6 +3995,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dart
       objectReference: {fileID: 0}
+    - target: {fileID: 6038701444003939367, guid: 0f2c78fcae3c04fa7b66ed92ea90737c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3935,3 +4017,4 @@ SceneRoots:
   - {fileID: 154615532}
   - {fileID: 1192778163}
   - {fileID: 8551047268370901808}
+  - {fileID: 885296243}
