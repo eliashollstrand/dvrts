@@ -4,68 +4,79 @@ using UnityEngine.XR.Interaction.Toolkit;
 public class Dart : MonoBehaviour
 {
     public Transform tip;
+    [SerializeField] private LayerMask boardLayerMask;
 
     private Rigidbody rb;
     private UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable grab;
     private bool hasStuck = false;
+    private bool isThrown = false;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
         grab = GetComponent<UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable>();
-
         grab.selectEntered.AddListener(OnGrab);
+        grab.selectExited.AddListener(OnRelease);
     }
 
     private void OnDestroy()
     {
         grab.selectEntered.RemoveListener(OnGrab);
+        grab.selectExited.RemoveListener(OnRelease);
     }
 
     private void OnGrab(SelectEnterEventArgs args)
     {
-        // Detach from board
         transform.SetParent(null);
-
-        // Unfreeze physics
+        rb.isKinematic = false;
         rb.constraints = RigidbodyConstraints.None;
-
         hasStuck = false;
+        isThrown = false;
+    }
 
-        Debug.Log("Dart grabbed and ready to throw again");
+    private void OnRelease(SelectExitEventArgs args)
+    {
+        isThrown = true;
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (hasStuck) return;
+        if (hasStuck || !isThrown) return;
 
         DartZone zone = collision.gameObject.GetComponent<DartZone>();
-        if (zone == null) return;
 
-        // Check if tip hit first
-        Vector3 dartDirection = rb.linearVelocity.normalized;
-        Vector3 contactNormal = collision.contacts[0].normal;
-        float dot = Vector3.Dot(dartDirection, contactNormal);
-
-        if (dot < -0.7f)
+        if (zone == null)
         {
-            hasStuck = true;
-
-            // Freeze motion
-            rb.linearVelocity = Vector3.zero;
-            rb.angularVelocity = Vector3.zero;
-            rb.constraints = RigidbodyConstraints.FreezeAll;
-
-            // Move dart so tip touches board
-            ContactPoint contact = collision.contacts[0];
-            Vector3 tipDir = tip.right; // X+ is tip
-            Vector3 tipOffset = tip.position - transform.position;
-            transform.position = contact.point - tipOffset + tipDir * 0.001f; // tiny push for realistic stick
-
-            // Parent to board
-            transform.SetParent(zone.transform);
-
-            Debug.Log($"Dart stuck to {collision.gameObject.name}");
+            // Hit something that isn't the board — count as a miss
+            isThrown = false; // prevent re-logging on bounce
+            GameManager.Instance.RegisterThrow(0, zoneType.Missed);
+            Debug.Log($"Dart missed — hit {collision.gameObject.name}");
+            return;
         }
+
+        Vector3 tipForward = tip.right;
+        Vector3 surfaceNormal = collision.contacts[0].normal;
+        float alignment = Vector3.Dot(tipForward, -surfaceNormal);
+        if (alignment < 0.7f) return;
+
+        hasStuck = true;
+        isThrown = false;
+
+        rb.linearVelocity = Vector3.zero;
+        rb.angularVelocity = Vector3.zero;
+        rb.isKinematic = true;
+
+        Vector3 rayOrigin = tip.position - tipForward * 0.05f;
+        Vector3 tipOffset = tip.position - transform.position;
+
+        if (Physics.Raycast(rayOrigin, tipForward, out RaycastHit hit, 0.15f, boardLayerMask))
+            transform.position = hit.point - tipOffset;
+        else
+            transform.position = collision.contacts[0].point - tipOffset;
+
+        transform.SetParent(zone.transform);
+
+        Debug.Log($"Dart stuck to {collision.gameObject.name}");
+        GameManager.Instance.RegisterThrow(zone.score, zone.type);
     }
 }

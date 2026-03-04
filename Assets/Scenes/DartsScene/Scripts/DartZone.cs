@@ -1,8 +1,17 @@
 using UnityEngine;
 
+public enum zoneType
+{
+    Single,
+    Double,
+    Triple,
+    Missed
+}
+
 public class DartZone : MonoBehaviour
 {
     public int score = 0;
+    public zoneType type;
 
     void Awake()
     {
@@ -38,12 +47,15 @@ public class DartZone : MonoBehaviour
                 {
                     case "Single":
                         score = baseValue;
+                        type = zoneType.Single;
                         break;
                     case "Double":
                         score = baseValue * 2;
+                        type = zoneType.Double;
                         break;
                     case "Triple":
                         score = baseValue * 3;
+                        type = zoneType.Triple;
                         break;
                     default:
                         Debug.LogWarning("Unknown prefix in dart zone name: " + name);
