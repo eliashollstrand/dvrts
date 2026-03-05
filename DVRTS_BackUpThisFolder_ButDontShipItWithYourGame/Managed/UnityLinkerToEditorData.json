@@ -158,7 +158,9 @@
           },
           {
             "name": "Cubemap",
-            "scenes": [],
+            "scenes": [
+              "Assets/Scenes/DartsScene.unity"
+            ],
             "dependencyType": 0,
             "icon": null
           },
@@ -244,7 +246,9 @@
           },
           {
             "name": "LightProbes",
-            "scenes": [],
+            "scenes": [
+              "Assets/Scenes/DartsScene.unity"
+            ],
             "dependencyType": 0,
             "icon": null
           },
@@ -484,18 +488,14 @@
           },
           {
             "name": "Texture",
-            "scenes": [
-              "Assets/Scenes/DartsScene.unity"
-            ],
-            "dependencyType": 0,
+            "scenes": [],
+            "dependencyType": 1,
             "icon": null
           },
           {
             "name": "Texture2D",
-            "scenes": [
-              "Assets/Scenes/DartsScene.unity"
-            ],
-            "dependencyType": 0,
+            "scenes": [],
+            "dependencyType": 1,
             "icon": null
           },
           {
