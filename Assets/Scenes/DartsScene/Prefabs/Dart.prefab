@@ -341,6 +341,7 @@ GameObject:
   - component: {fileID: 1712127288740857881}
   - component: {fileID: 6416493924287985514}
   - component: {fileID: 320167478695338789}
+  - component: {fileID: 1744193543123374528}
   m_Layer: 6
   m_Name: Tip
   m_TagString: Untagged
@@ -442,6 +443,18 @@ CapsuleCollider:
   m_Height: 0.73983955
   m_Direction: 0
   m_Center: {x: -0.36168027, y: -0.0000003259629, z: -1.0278114e-15}
+--- !u!114 &1744193543123374528
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5899507442876896511}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb6e3e45e3dc4408da34714fb931a6bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DebugCollision
 --- !u!1 &6377630013958633440
 GameObject:
   m_ObjectHideFlags: 0

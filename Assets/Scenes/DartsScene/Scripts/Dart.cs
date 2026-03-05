@@ -28,8 +28,8 @@ public class Dart : MonoBehaviour
     private void OnGrab(SelectEnterEventArgs args)
     {
         transform.SetParent(null);
-        rb.isKinematic = false;
         rb.constraints = RigidbodyConstraints.None;
+        rb.isKinematic = false;
         hasStuck = false;
         isThrown = false;
     }
@@ -44,11 +44,9 @@ public class Dart : MonoBehaviour
         if (hasStuck || !isThrown) return;
 
         DartZone zone = collision.gameObject.GetComponent<DartZone>();
-
         if (zone == null)
         {
-            // Hit something that isn't the board — count as a miss
-            isThrown = false; // prevent re-logging on bounce
+            isThrown = false;
             GameManager.Instance.RegisterThrow(0, zoneType.Missed);
             Debug.Log($"Dart missed — hit {collision.gameObject.name}");
             return;
@@ -64,7 +62,7 @@ public class Dart : MonoBehaviour
 
         rb.linearVelocity = Vector3.zero;
         rb.angularVelocity = Vector3.zero;
-        rb.isKinematic = true;
+        rb.constraints = RigidbodyConstraints.FreezeAll;
 
         Vector3 rayOrigin = tip.position - tipForward * 0.05f;
         Vector3 tipOffset = tip.position - transform.position;
@@ -75,8 +73,7 @@ public class Dart : MonoBehaviour
             transform.position = collision.contacts[0].point - tipOffset;
 
         transform.SetParent(zone.transform);
-
-        Debug.Log($"Dart stuck to {collision.gameObject.name}");
         GameManager.Instance.RegisterThrow(zone.score, zone.type);
+        Debug.Log($"Dart stuck to {collision.gameObject.name}");
     }
 }
