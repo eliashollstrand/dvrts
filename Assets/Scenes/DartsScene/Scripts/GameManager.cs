@@ -6,9 +6,10 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance { get; private set; }
 
     // UI subscribes to these
-    public event Action<int, int, int, int> OnScoreChanged; // score, leg, turn, dartsThisTurn
+    public event Action<int, int, int, int> OnStateChanged; // score, leg, turn, dartsThisTurn
     public event Action OnBust;
     public event Action OnLegComplete;
+    public event Action OnTurnComplete;
 
     private int currentLeg = 1;
     // private int currentScore = 501;
@@ -20,6 +21,8 @@ public class GameManager : MonoBehaviour
     private int bustCount = 0;
     private ThrowLogger throwLogger;
     private LegLogger legLogger;
+
+    public bool newTurnPending;
 
     private void Awake()
     {
@@ -69,7 +72,7 @@ public class GameManager : MonoBehaviour
         }
 
         currentScore = newScore;
-        OnScoreChanged?.Invoke(currentScore, currentLeg, turnNumber, dartsThisTurn);
+        OnStateChanged?.Invoke(currentScore, currentLeg, turnNumber, dartsThisTurn);
 
         if (dartsThisTurn >= 3)
             EndTurn();
@@ -80,14 +83,8 @@ public class GameManager : MonoBehaviour
         bustCount++;
         currentScore = startingScoreThisTurn;
         OnBust?.Invoke();
-        OnScoreChanged?.Invoke(currentScore, currentLeg, turnNumber, dartsThisTurn);
+        OnStateChanged?.Invoke(currentScore, currentLeg, turnNumber, dartsThisTurn);
         EndTurn();
-    }
-
-    private void EndTurn()
-    {
-        dartsThisTurn = 0;
-        turnNumber++;
     }
 
     private void StartNewLeg()
@@ -98,6 +95,27 @@ public class GameManager : MonoBehaviour
         throwNumber = 0;
         dartsThisTurn = 0;
         bustCount = 0;
-        OnScoreChanged?.Invoke(currentScore, currentLeg, turnNumber, dartsThisTurn);
+        OnStateChanged?.Invoke(currentScore, currentLeg, turnNumber, dartsThisTurn);
     }
+
+    public void StartNewTurn()
+    {
+        dartsThisTurn = 0;
+        turnNumber++;
+        newTurnPending = false;
+        DespawnDarts();
+        OnStateChanged?.Invoke(currentScore, currentLeg, turnNumber, dartsThisTurn);
+        OnTurnComplete?.Invoke();
+    }
+
+    private void DespawnDarts()
+    {
+        GameObject[] darts = GameObject.FindGameObjectsWithTag("ThrownDart");
+        foreach(GameObject dart in darts)
+        {
+            Destroy(dart);
+        }
+    }
+
+    private void EndTurn() => newTurnPending = true; 
 }

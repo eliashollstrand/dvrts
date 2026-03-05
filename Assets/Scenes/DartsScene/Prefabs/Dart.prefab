@@ -19,7 +19,7 @@ GameObject:
   - component: {fileID: 5071264486956902213}
   m_Layer: 6
   m_Name: Dart
-  m_TagString: Untagged
+  m_TagString: NotThrownDart
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

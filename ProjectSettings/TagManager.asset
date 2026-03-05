@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Anchor
   - Board
+  - ThrownDart
+  - NotThrownDart
   layers:
   - Default
   - TransparentFX

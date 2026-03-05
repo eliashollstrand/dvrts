@@ -25,6 +25,8 @@ public class DartSpawner : MonoBehaviour
     private void OnDartGrabbed(SelectEnterEventArgs args)
     {
         grab.selectEntered.RemoveListener(OnDartGrabbed);
+        if(GameManager.Instance.newTurnPending) 
+            GameManager.Instance.StartNewTurn();
         SpawnNewDart();
     }
 }

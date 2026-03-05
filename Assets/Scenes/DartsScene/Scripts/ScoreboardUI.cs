@@ -21,20 +21,21 @@ public class ScoreboardUI : MonoBehaviour
             return;
         }
 
-        GameManager.Instance.OnScoreChanged += UpdateDisplay;
+        GameManager.Instance.OnStateChanged += UpdateDisplay;
         GameManager.Instance.OnBust += ShowBust;
         GameManager.Instance.OnLegComplete += ShowLegComplete;
+        GameManager.Instance.OnTurnComplete += ResetState;
 
         // Populate immediately with starting values
 
         UpdateDisplay(501, 1, 1, 0);
-        statusText.text = "";
+        ResetState();
     }
 
     private void OnDestroy()
     {
         if (GameManager.Instance == null) return;
-        GameManager.Instance.OnScoreChanged -= UpdateDisplay;
+        GameManager.Instance.OnStateChanged -= UpdateDisplay;
         GameManager.Instance.OnBust -= ShowBust;
         GameManager.Instance.OnLegComplete -= ShowLegComplete;
     }
@@ -52,10 +53,15 @@ public class ScoreboardUI : MonoBehaviour
         statusText.text = "BUST!";
         statusText.color = bustColor;  
     }
-    
+
     private void ShowLegComplete()
     {
         statusText.text = "LEG COMPLETE!";
         statusText.color = checkoutColor;
+    }
+
+    private void ResetState()
+    {
+        statusText.text = "";
     }
 }

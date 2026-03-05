@@ -37,6 +37,7 @@ public class Dart : MonoBehaviour
     private void OnRelease(SelectExitEventArgs args)
     {
         isThrown = true;
+        this.tag = "ThrownDart";
     }
 
     private void OnCollisionEnter(Collision collision)
