@@ -9308,6 +9308,8 @@ struct ScoreboardUI_t8A34B218B36B1AD47AD130C284C3916C1316DBFD  : public MonoBeha
 	TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* ___turnText;
 	TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* ___dartsText;
 	TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* ___statusText;
+	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ___bustColor;
+	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ___checkoutColor;
 };
 struct StepManager_tF1C63CF67B7BA5D9E721661827AA0CBD14FF022D  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
 {
@@ -11513,9 +11515,9 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable9475[13] =
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable9476[1] = 
 {
 	static_cast<int32_t>(offsetof(LegLogger_t20A963E86BD14E71215635466825DD2BF6E8F9BE, ___filePath)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable9477[5] = 
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable9477[7] = 
 {
-	static_cast<int32_t>(offsetof(ScoreboardUI_t8A34B218B36B1AD47AD130C284C3916C1316DBFD, ___scoreText)),static_cast<int32_t>(offsetof(ScoreboardUI_t8A34B218B36B1AD47AD130C284C3916C1316DBFD, ___legText)),static_cast<int32_t>(offsetof(ScoreboardUI_t8A34B218B36B1AD47AD130C284C3916C1316DBFD, ___turnText)),static_cast<int32_t>(offsetof(ScoreboardUI_t8A34B218B36B1AD47AD130C284C3916C1316DBFD, ___dartsText)),static_cast<int32_t>(offsetof(ScoreboardUI_t8A34B218B36B1AD47AD130C284C3916C1316DBFD, ___statusText)),};
+	static_cast<int32_t>(offsetof(ScoreboardUI_t8A34B218B36B1AD47AD130C284C3916C1316DBFD, ___scoreText)),static_cast<int32_t>(offsetof(ScoreboardUI_t8A34B218B36B1AD47AD130C284C3916C1316DBFD, ___legText)),static_cast<int32_t>(offsetof(ScoreboardUI_t8A34B218B36B1AD47AD130C284C3916C1316DBFD, ___turnText)),static_cast<int32_t>(offsetof(ScoreboardUI_t8A34B218B36B1AD47AD130C284C3916C1316DBFD, ___dartsText)),static_cast<int32_t>(offsetof(ScoreboardUI_t8A34B218B36B1AD47AD130C284C3916C1316DBFD, ___statusText)),static_cast<int32_t>(offsetof(ScoreboardUI_t8A34B218B36B1AD47AD130C284C3916C1316DBFD, ___bustColor)),static_cast<int32_t>(offsetof(ScoreboardUI_t8A34B218B36B1AD47AD130C284C3916C1316DBFD, ___checkoutColor)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable9478[1] = 
 {
 	static_cast<int32_t>(offsetof(ThrowLogger_tD43955C0ABC9E9082170D180798070B1B9C72975, ___filePath)),};

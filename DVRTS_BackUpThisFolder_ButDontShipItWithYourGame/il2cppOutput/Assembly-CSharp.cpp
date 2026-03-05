@@ -387,16 +387,15 @@ IL2CPP_EXTERN_C RuntimeField* U3CPrivateImplementationDetailsU3E_t0F5473E849A5A5
 IL2CPP_EXTERN_C String_t* _stringLiteral03DBE4CC4A6CC2E3F334FD054F07F9D6C56758A8;
 IL2CPP_EXTERN_C String_t* _stringLiteral21FA49A2872456EAD059BB43A15201350ACF9E9F;
 IL2CPP_EXTERN_C String_t* _stringLiteral29E5F4354543220528F47026059EBF438403E498;
-IL2CPP_EXTERN_C String_t* _stringLiteral2CA7CC2EFFDC5A28225CCFAEC1CBC86FE0B56C02;
 IL2CPP_EXTERN_C String_t* _stringLiteral2F316371B6B1CDDBC7242BE4657A5CE9BE89034E;
-IL2CPP_EXTERN_C String_t* _stringLiteral2F83D66ABC80E170D51C4F295B70D9E4419020BA;
 IL2CPP_EXTERN_C String_t* _stringLiteral35A4E09882D228A708F1AF9E36649315BEF636A8;
 IL2CPP_EXTERN_C String_t* _stringLiteral3B4A635E8ECD3FF8089267C65C8CF0573D5C3421;
+IL2CPP_EXTERN_C String_t* _stringLiteral3F7EC1A21048502F040B2931DA03DB029879E40D;
 IL2CPP_EXTERN_C String_t* _stringLiteral4269EF0D25F409E82DB7814704F598C7FE9DEE90;
-IL2CPP_EXTERN_C String_t* _stringLiteral477B78D0470F7D963FE309268F75C407DE8C8BCA;
+IL2CPP_EXTERN_C String_t* _stringLiteral468154FD4527764B23CFE6715B929977A3A4595B;
+IL2CPP_EXTERN_C String_t* _stringLiteral491C981B231C2410D50B63964EFA835E982D476D;
 IL2CPP_EXTERN_C String_t* _stringLiteral4E7CF3E44DE163093150DCC321C11DE6278FF360;
 IL2CPP_EXTERN_C String_t* _stringLiteral525F5C8DBE02A4413AF96F338A4166104DA95AE4;
-IL2CPP_EXTERN_C String_t* _stringLiteral57931A2E3C1136811517AD0563FBF023FC950908;
 IL2CPP_EXTERN_C String_t* _stringLiteral5D26AB8F69DFE8F4537E067EAFFB9BF4B295CCEE;
 IL2CPP_EXTERN_C String_t* _stringLiteral675D495E61C139628601D1F560A558803C58CB67;
 IL2CPP_EXTERN_C String_t* _stringLiteral67C3DD700FFAEAD989703632A3CDE971D1A0E9EC;
@@ -407,13 +406,14 @@ IL2CPP_EXTERN_C String_t* _stringLiteral76DC7F616262C730EB0A8340E23D177FAD7FB2F4
 IL2CPP_EXTERN_C String_t* _stringLiteral78896F8AD26E5892684C68B59CD7F1A95C5145D7;
 IL2CPP_EXTERN_C String_t* _stringLiteral80FEB0648B6EB31842AE2186FE58D7C305720E87;
 IL2CPP_EXTERN_C String_t* _stringLiteral8DB452CB7B63CA32A495EEC2D40F313E2AD18123;
-IL2CPP_EXTERN_C String_t* _stringLiteral8E6ABEDBC3814E4E6A66ABA97B400F420B2D35A5;
 IL2CPP_EXTERN_C String_t* _stringLiteral8F8BFCFC439A636B20C06C334A493AB7004843ED;
 IL2CPP_EXTERN_C String_t* _stringLiteralA00AC2559075BC44AA715121FC0232ADF7EA45E5;
 IL2CPP_EXTERN_C String_t* _stringLiteralB12D2F40A92C97859CD787FDBA088BDEDF288457;
+IL2CPP_EXTERN_C String_t* _stringLiteralB27C3155C928D28FF3A4288DB86C9AA962680DF4;
 IL2CPP_EXTERN_C String_t* _stringLiteralB6EDDCF41FD271D4F95BDE73FE0B0A12F7F0C667;
 IL2CPP_EXTERN_C String_t* _stringLiteralBA652631C144CED4BB197F9E554BEFB4CB06E362;
 IL2CPP_EXTERN_C String_t* _stringLiteralBB35D6EC0836D9C1C3A319A477D2D66457DD3E0C;
+IL2CPP_EXTERN_C String_t* _stringLiteralC0CCD21FC5C88E70E465F2E5869A9405962C4BC9;
 IL2CPP_EXTERN_C String_t* _stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709;
 IL2CPP_EXTERN_C String_t* _stringLiteralE5F9761355136EB6B27AE3E99BEA0E29D9201964;
 IL2CPP_EXTERN_C String_t* _stringLiteralE7874FB807E532B52D8CD7AB9F7D429DF96ED847;
@@ -2430,6 +2430,8 @@ struct ScoreboardUI_t8A34B218B36B1AD47AD130C284C3916C1316DBFD  : public MonoBeha
 	TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* ___turnText;
 	TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* ___dartsText;
 	TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* ___statusText;
+	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ___bustColor;
+	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ___checkoutColor;
 };
 struct StepManager_tF1C63CF67B7BA5D9E721661827AA0CBD14FF022D  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
 {
@@ -3307,6 +3309,13 @@ struct XRBaseInteractable_t76185BD6DF3BC86B3CDD82E6368C3C7157E39AE4_StaticFields
 	ProfilerMarker_tA256E18DA86EDBC5528CE066FC91C96EE86501AD ___s_ProcessInteractionStrengthMarker;
 	ProfilerMarker_tA256E18DA86EDBC5528CE066FC91C96EE86501AD ___s_ProcessInteractionStrengthEventMarker;
 };
+struct Graphic_tCBFCA4585A19E2B75465AECFEAC43F4016BF7931_StaticFields
+{
+	Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* ___s_DefaultUI;
+	Texture2D_tE6505BC111DD8A424A9DBE8E05D7D09E11FFFCF4* ___s_WhiteTexture;
+	Mesh_t6D9C539763A09BC2B12AEAEF36F6DFFC98AE63D4* ___s_Mesh;
+	VertexHelper_tB905FCB02AE67CBEE5F265FE37A5938FC5D136FE* ___s_VertexHelper;
+};
 struct XRGrabInteractable_tAE7E2F24377399C9B5159179E4B43EA6AA55531B_StaticFields
 {
 	LinkedPool_1_t6A6017AF114EF397084F1333559D0DB9CCE28598* ___s_DropEventArgs;
@@ -3772,6 +3781,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_remove_OnBust_m8573FF72FB79B
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_remove_OnLegComplete_mA7521B46136964B8CFF1D2229C4870A4FCA9BAE9 (GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* __this, Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* ___0_value, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* Int32_ToString_m030E01C24E294D6762FB0B6F37CB541581F55CA5 (int32_t* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* String_Format_mA8DBB4C2516B9723C5A41E6CB1E2FAF4BBE96DD8 (String_t* ___0_format, RuntimeObject* ___1_arg0, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Color__ctor_m3786F0D6E510D9CFA544523A955870BD2A514C8C_inline (Color_tD001788D726C3A7F1379BEED0260B9591F440C1F* __this, float ___0_r, float ___1_g, float ___2_b, float ___3_a, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RuntimeHelpers_InitializeArray_m751372AA3F24FBF6DA9B9D687CBFA2DE436CAB9B (RuntimeArray* ___0_array, RuntimeFieldHandle_t6E4C45B6D2EA12FC99185805A7E77527899B25C5 ___1_fldHandle, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602 (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C* ___0_x, Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C* ___1_y, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR AnimationClip_t00BD2F131D308A4AD2C6B0BF66644FC25FECE712* Animation_get_clip_m6041709D3BC8EA54D2D65B9560D2B4E51F78BD51 (Animation_t6593B06C39E3B139808B19F2C719C860F3F61040* __this, const RuntimeMethod* method) ;
@@ -4057,7 +4067,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BindingsGroup__ctor_m1EFD3F405050571D3A6
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_Normalize_mEF8349CC39674236CFC694189AFD36E31F89AC8F_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_value, const RuntimeMethod* method) ;
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Vector3_Magnitude_m21652D951393A3D7CE92CE40049A0E7F76544D1B_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_vector, const RuntimeMethod* method) ;
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_op_Division_mCC6BB24E372AB96B8380D1678446EF6A8BAE13BB_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_a, float ___1_d, const RuntimeMethod* method) ;
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Color__ctor_m3786F0D6E510D9CFA544523A955870BD2A514C8C_inline (Color_tD001788D726C3A7F1379BEED0260B9591F440C1F* __this, float ___0_r, float ___1_g, float ___2_b, float ___3_a, const RuntimeMethod* method) ;
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
@@ -5723,7 +5732,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager__ctor_mF453CED520617BFB65C52
 		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/GameManager.cs:13>
 		__this->___currentLeg = 1;
 		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/GameManager.cs:15>
-		__this->___currentScore = ((int32_t)100);
+		__this->___currentScore = ((int32_t)10);
 		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/GameManager.cs:16>
 		__this->___turnNumber = 1;
 		MonoBehaviour__ctor_m592DB0105CA0BC97AA1C5F4AD27B12D68A3B7C1E(__this, NULL);
@@ -5862,7 +5871,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ScoreboardUI_Start_m74C546050FEDD941EC31
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/ScoreboardUI.cs:15>
+		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/ScoreboardUI.cs:18>
 		GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* L_0;
 		L_0 = GameManager_get_Instance_m076FE4D98E785B5AEE0B4C360C7857F824E7FBD0_inline(NULL);
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
@@ -5874,43 +5883,43 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ScoreboardUI_Start_m74C546050FEDD941EC31
 		}
 	}
 	{
-		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/ScoreboardUI.cs:17>
+		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/ScoreboardUI.cs:20>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_LogError_mB00B2B4468EF3CAF041B038D840820FB84C924B2(_stringLiteral76DC7F616262C730EB0A8340E23D177FAD7FB2F4, NULL);
-		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/ScoreboardUI.cs:18>
+		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/ScoreboardUI.cs:21>
 		return;
 	}
 
 IL_0018:
 	{
-		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/ScoreboardUI.cs:21>
+		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/ScoreboardUI.cs:24>
 		GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* L_2;
 		L_2 = GameManager_get_Instance_m076FE4D98E785B5AEE0B4C360C7857F824E7FBD0_inline(NULL);
 		Action_4_t226D79A062EB6BFF3E2C7E7853FC37BB00B95A80* L_3 = (Action_4_t226D79A062EB6BFF3E2C7E7853FC37BB00B95A80*)il2cpp_codegen_object_new(Action_4_t226D79A062EB6BFF3E2C7E7853FC37BB00B95A80_il2cpp_TypeInfo_var);
 		Action_4__ctor_mC889E292AD98982C9EEADC3A692E75758BE9C28D(L_3, __this, (intptr_t)((void*)ScoreboardUI_UpdateDisplay_m6E7A6977B126A0C4D3BB6BB7C93D0F7E36F5C076_RuntimeMethod_var), NULL);
 		NullCheck(L_2);
 		GameManager_add_OnScoreChanged_m943836E09B57FDF992CA54FAB5094E4ED328FCE9(L_2, L_3, NULL);
-		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/ScoreboardUI.cs:22>
+		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/ScoreboardUI.cs:25>
 		GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* L_4;
 		L_4 = GameManager_get_Instance_m076FE4D98E785B5AEE0B4C360C7857F824E7FBD0_inline(NULL);
 		Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* L_5 = (Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07*)il2cpp_codegen_object_new(Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07_il2cpp_TypeInfo_var);
 		Action__ctor_mBDC7B0B4A3F583B64C2896F01BDED360772F67DC(L_5, __this, (intptr_t)((void*)ScoreboardUI_ShowBust_m635EF99F575A251A2B11233E9B0BB38DAF7FFE1B_RuntimeMethod_var), NULL);
 		NullCheck(L_4);
 		GameManager_add_OnBust_m9F24B454AB3C0659CCC57FA488A199E1970EF7C3(L_4, L_5, NULL);
-		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/ScoreboardUI.cs:23>
+		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/ScoreboardUI.cs:26>
 		GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* L_6;
 		L_6 = GameManager_get_Instance_m076FE4D98E785B5AEE0B4C360C7857F824E7FBD0_inline(NULL);
 		Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* L_7 = (Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07*)il2cpp_codegen_object_new(Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07_il2cpp_TypeInfo_var);
 		Action__ctor_mBDC7B0B4A3F583B64C2896F01BDED360772F67DC(L_7, __this, (intptr_t)((void*)ScoreboardUI_ShowLegComplete_m5A87A11879FD6813227E046BEA29B4A727EEE22E_RuntimeMethod_var), NULL);
 		NullCheck(L_6);
 		GameManager_add_OnLegComplete_m1AED83988DE2E8622E730C082C234CA0A075B0A7(L_6, L_7, NULL);
-		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/ScoreboardUI.cs:26>
+		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/ScoreboardUI.cs:30>
 		ScoreboardUI_UpdateDisplay_m6E7A6977B126A0C4D3BB6BB7C93D0F7E36F5C076(__this, ((int32_t)501), 1, 1, 0, NULL);
-		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/ScoreboardUI.cs:27>
+		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/ScoreboardUI.cs:31>
 		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_8 = __this->___statusText;
 		NullCheck(L_8);
 		VirtualActionInvoker1< String_t* >::Invoke(66, L_8, _stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709);
-		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/ScoreboardUI.cs:28>
+		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/ScoreboardUI.cs:32>
 		return;
 	}
 }
@@ -5929,7 +5938,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ScoreboardUI_OnDestroy_mD886875B3809105B
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/ScoreboardUI.cs:32>
+		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/ScoreboardUI.cs:36>
 		GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* L_0;
 		L_0 = GameManager_get_Instance_m076FE4D98E785B5AEE0B4C360C7857F824E7FBD0_inline(NULL);
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
@@ -5941,34 +5950,34 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ScoreboardUI_OnDestroy_mD886875B3809105B
 		}
 	}
 	{
-		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/ScoreboardUI.cs:32>
+		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/ScoreboardUI.cs:36>
 		return;
 	}
 
 IL_000e:
 	{
-		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/ScoreboardUI.cs:33>
+		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/ScoreboardUI.cs:37>
 		GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* L_2;
 		L_2 = GameManager_get_Instance_m076FE4D98E785B5AEE0B4C360C7857F824E7FBD0_inline(NULL);
 		Action_4_t226D79A062EB6BFF3E2C7E7853FC37BB00B95A80* L_3 = (Action_4_t226D79A062EB6BFF3E2C7E7853FC37BB00B95A80*)il2cpp_codegen_object_new(Action_4_t226D79A062EB6BFF3E2C7E7853FC37BB00B95A80_il2cpp_TypeInfo_var);
 		Action_4__ctor_mC889E292AD98982C9EEADC3A692E75758BE9C28D(L_3, __this, (intptr_t)((void*)ScoreboardUI_UpdateDisplay_m6E7A6977B126A0C4D3BB6BB7C93D0F7E36F5C076_RuntimeMethod_var), NULL);
 		NullCheck(L_2);
 		GameManager_remove_OnScoreChanged_m7ECE07CFC87C5D5925B8CAA0D9B84386C1601D25(L_2, L_3, NULL);
-		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/ScoreboardUI.cs:34>
+		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/ScoreboardUI.cs:38>
 		GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* L_4;
 		L_4 = GameManager_get_Instance_m076FE4D98E785B5AEE0B4C360C7857F824E7FBD0_inline(NULL);
 		Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* L_5 = (Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07*)il2cpp_codegen_object_new(Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07_il2cpp_TypeInfo_var);
 		Action__ctor_mBDC7B0B4A3F583B64C2896F01BDED360772F67DC(L_5, __this, (intptr_t)((void*)ScoreboardUI_ShowBust_m635EF99F575A251A2B11233E9B0BB38DAF7FFE1B_RuntimeMethod_var), NULL);
 		NullCheck(L_4);
 		GameManager_remove_OnBust_m8573FF72FB79B57FBA6309214CF6F8108C950EB4(L_4, L_5, NULL);
-		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/ScoreboardUI.cs:35>
+		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/ScoreboardUI.cs:39>
 		GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* L_6;
 		L_6 = GameManager_get_Instance_m076FE4D98E785B5AEE0B4C360C7857F824E7FBD0_inline(NULL);
 		Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* L_7 = (Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07*)il2cpp_codegen_object_new(Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07_il2cpp_TypeInfo_var);
 		Action__ctor_mBDC7B0B4A3F583B64C2896F01BDED360772F67DC(L_7, __this, (intptr_t)((void*)ScoreboardUI_ShowLegComplete_m5A87A11879FD6813227E046BEA29B4A727EEE22E_RuntimeMethod_var), NULL);
 		NullCheck(L_6);
 		GameManager_remove_OnLegComplete_mA7521B46136964B8CFF1D2229C4870A4FCA9BAE9(L_6, L_7, NULL);
-		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/ScoreboardUI.cs:36>
+		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/ScoreboardUI.cs:40>
 		return;
 	}
 }
@@ -5978,51 +5987,46 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ScoreboardUI_UpdateDisplay_m6E7A6977B126
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral2CA7CC2EFFDC5A28225CCFAEC1CBC86FE0B56C02);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral2F83D66ABC80E170D51C4F295B70D9E4419020BA);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral477B78D0470F7D963FE309268F75C407DE8C8BCA);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral3F7EC1A21048502F040B2931DA03DB029879E40D);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral468154FD4527764B23CFE6715B929977A3A4595B);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral491C981B231C2410D50B63964EFA835E982D476D);
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/ScoreboardUI.cs:40>
+		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/ScoreboardUI.cs:44>
 		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_0 = __this->___scoreText;
 		String_t* L_1;
 		L_1 = Int32_ToString_m030E01C24E294D6762FB0B6F37CB541581F55CA5((&___0_score), NULL);
 		NullCheck(L_0);
 		VirtualActionInvoker1< String_t* >::Invoke(66, L_0, L_1);
-		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/ScoreboardUI.cs:41>
+		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/ScoreboardUI.cs:45>
 		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_2 = __this->___legText;
 		int32_t L_3 = ___1_leg;
 		int32_t L_4 = L_3;
 		RuntimeObject* L_5 = Box(il2cpp_defaults.int32_class, &L_4);
 		String_t* L_6;
-		L_6 = String_Format_mA8DBB4C2516B9723C5A41E6CB1E2FAF4BBE96DD8(_stringLiteral2F83D66ABC80E170D51C4F295B70D9E4419020BA, L_5, NULL);
+		L_6 = String_Format_mA8DBB4C2516B9723C5A41E6CB1E2FAF4BBE96DD8(_stringLiteral3F7EC1A21048502F040B2931DA03DB029879E40D, L_5, NULL);
 		NullCheck(L_2);
 		VirtualActionInvoker1< String_t* >::Invoke(66, L_2, L_6);
-		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/ScoreboardUI.cs:42>
+		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/ScoreboardUI.cs:46>
 		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_7 = __this->___turnText;
 		int32_t L_8 = ___2_turn;
 		int32_t L_9 = L_8;
 		RuntimeObject* L_10 = Box(il2cpp_defaults.int32_class, &L_9);
 		String_t* L_11;
-		L_11 = String_Format_mA8DBB4C2516B9723C5A41E6CB1E2FAF4BBE96DD8(_stringLiteral477B78D0470F7D963FE309268F75C407DE8C8BCA, L_10, NULL);
+		L_11 = String_Format_mA8DBB4C2516B9723C5A41E6CB1E2FAF4BBE96DD8(_stringLiteral468154FD4527764B23CFE6715B929977A3A4595B, L_10, NULL);
 		NullCheck(L_7);
 		VirtualActionInvoker1< String_t* >::Invoke(66, L_7, L_11);
-		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/ScoreboardUI.cs:43>
+		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/ScoreboardUI.cs:47>
 		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_12 = __this->___dartsText;
 		int32_t L_13 = ___3_darts;
 		int32_t L_14 = L_13;
 		RuntimeObject* L_15 = Box(il2cpp_defaults.int32_class, &L_14);
 		String_t* L_16;
-		L_16 = String_Format_mA8DBB4C2516B9723C5A41E6CB1E2FAF4BBE96DD8(_stringLiteral2CA7CC2EFFDC5A28225CCFAEC1CBC86FE0B56C02, L_15, NULL);
+		L_16 = String_Format_mA8DBB4C2516B9723C5A41E6CB1E2FAF4BBE96DD8(_stringLiteral491C981B231C2410D50B63964EFA835E982D476D, L_15, NULL);
 		NullCheck(L_12);
 		VirtualActionInvoker1< String_t* >::Invoke(66, L_12, L_16);
-		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/ScoreboardUI.cs:44>
-		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_17 = __this->___statusText;
-		NullCheck(L_17);
-		VirtualActionInvoker1< String_t* >::Invoke(66, L_17, _stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709);
-		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/ScoreboardUI.cs:45>
+		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/ScoreboardUI.cs:48>
 		return;
 	}
 }
@@ -6032,14 +6036,20 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ScoreboardUI_ShowBust_m635EF99F575A251A2
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral57931A2E3C1136811517AD0563FBF023FC950908);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralC0CCD21FC5C88E70E465F2E5869A9405962C4BC9);
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/ScoreboardUI.cs:47>
+		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/ScoreboardUI.cs:52>
 		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_0 = __this->___statusText;
 		NullCheck(L_0);
-		VirtualActionInvoker1< String_t* >::Invoke(66, L_0, _stringLiteral57931A2E3C1136811517AD0563FBF023FC950908);
+		VirtualActionInvoker1< String_t* >::Invoke(66, L_0, _stringLiteralC0CCD21FC5C88E70E465F2E5869A9405962C4BC9);
+		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/ScoreboardUI.cs:53>
+		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_1 = __this->___statusText;
+		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_2 = __this->___bustColor;
+		NullCheck(L_1);
+		VirtualActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(23, L_1, L_2);
+		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/ScoreboardUI.cs:54>
 		return;
 	}
 }
@@ -6049,14 +6059,20 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ScoreboardUI_ShowLegComplete_m5A87A11879
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral8E6ABEDBC3814E4E6A66ABA97B400F420B2D35A5);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralB27C3155C928D28FF3A4288DB86C9AA962680DF4);
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/ScoreboardUI.cs:48>
+		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/ScoreboardUI.cs:58>
 		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_0 = __this->___statusText;
 		NullCheck(L_0);
-		VirtualActionInvoker1< String_t* >::Invoke(66, L_0, _stringLiteral8E6ABEDBC3814E4E6A66ABA97B400F420B2D35A5);
+		VirtualActionInvoker1< String_t* >::Invoke(66, L_0, _stringLiteralB27C3155C928D28FF3A4288DB86C9AA962680DF4);
+		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/ScoreboardUI.cs:59>
+		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_1 = __this->___statusText;
+		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_2 = __this->___checkoutColor;
+		NullCheck(L_1);
+		VirtualActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(23, L_1, L_2);
+		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/ScoreboardUI.cs:60>
 		return;
 	}
 }
@@ -6064,6 +6080,16 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ScoreboardUI_ShowLegComplete_m5A87A11879
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ScoreboardUI__ctor_m15D33847BC96F6929D438814EC92FBD8636E95AB (ScoreboardUI_t8A34B218B36B1AD47AD130C284C3916C1316DBFD* __this, const RuntimeMethod* method) 
 {
 	{
+		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/ScoreboardUI.cs:13>
+		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_0;
+		memset((&L_0), 0, sizeof(L_0));
+		Color__ctor_m3786F0D6E510D9CFA544523A955870BD2A514C8C_inline((&L_0), (0.68599999f), (0.0900000036f), (0.0900000036f), (1.0f), NULL);
+		__this->___bustColor = L_0;
+		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/ScoreboardUI.cs:14>
+		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_1;
+		memset((&L_1), 0, sizeof(L_1));
+		Color__ctor_m3786F0D6E510D9CFA544523A955870BD2A514C8C_inline((&L_1), (0.0939999968f), (0.43900001f), (0.075000003f), (1.0f), NULL);
+		__this->___checkoutColor = L_1;
 		MonoBehaviour__ctor_m592DB0105CA0BC97AA1C5F4AD27B12D68A3B7C1E(__this, NULL);
 		return;
 	}
@@ -11798,6 +11824,21 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Action_Invoke_m7126A54DACA72
 	typedef void (*FunctionPointerType) (RuntimeObject*, const RuntimeMethod*);
 	((FunctionPointerType)__this->___invoke_impl)((Il2CppObject*)__this->___method_code, reinterpret_cast<RuntimeMethod*>(__this->___method));
 }
+// Method Definition Index: 45344
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Color__ctor_m3786F0D6E510D9CFA544523A955870BD2A514C8C_inline (Color_tD001788D726C3A7F1379BEED0260B9591F440C1F* __this, float ___0_r, float ___1_g, float ___2_b, float ___3_a, const RuntimeMethod* method) 
+{
+	{
+		float L_0 = ___0_r;
+		__this->___r = L_0;
+		float L_1 = ___1_g;
+		__this->___g = L_1;
+		float L_2 = ___2_b;
+		__this->___b = L_2;
+		float L_3 = ___3_a;
+		__this->___a = L_3;
+		return;
+	}
+}
 // Method Definition Index: 53066
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void float3__ctor_mC61002CD0EC13D7C37D846D021A78C028FB80DB9_inline (float3_t4AB5D88249ADB24F69FFD0793E8ED25E1CC3745E* __this, float ___0_x, float ___1_y, float ___2_z, const RuntimeMethod* method) 
 {
@@ -12648,20 +12689,5 @@ IL_0021:
 	{
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_10 = V_0;
 		return L_10;
-	}
-}
-// Method Definition Index: 45344
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Color__ctor_m3786F0D6E510D9CFA544523A955870BD2A514C8C_inline (Color_tD001788D726C3A7F1379BEED0260B9591F440C1F* __this, float ___0_r, float ___1_g, float ___2_b, float ___3_a, const RuntimeMethod* method) 
-{
-	{
-		float L_0 = ___0_r;
-		__this->___r = L_0;
-		float L_1 = ___1_g;
-		__this->___g = L_1;
-		float L_2 = ___2_b;
-		__this->___b = L_2;
-		float L_3 = ___3_a;
-		__this->___a = L_3;
-		return;
 	}
 }
