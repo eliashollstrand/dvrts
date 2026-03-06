@@ -24,6 +24,8 @@ public class GameManager : MonoBehaviour
 
     public bool newTurnPending;
 
+    public bool reversedGravity = false;
+
     private void Awake()
     {
         if (Instance == null) Instance = this;
@@ -34,6 +36,12 @@ public class GameManager : MonoBehaviour
     {
         throwLogger = new ThrowLogger();
         legLogger = new LegLogger();
+    }
+
+    public void SetReversedGravity(bool value) 
+    {   
+        reversedGravity = value;
+        Debug.Log($"Reversed gravity: {reversedGravity}");
     }
 
     public void RegisterThrow(int score, zoneType zoneType)

@@ -31,6 +31,17 @@ public class Dart : MonoBehaviour
         grab.selectExited.RemoveListener(OnRelease);
     }
 
+    private void FixedUpdate() 
+    {
+        if(isThrown && !hasStuck) 
+        {
+            if(GameManager.Instance.reversedGravity) 
+            {
+                rb.AddForce(-Physics.gravity * 2, ForceMode.Acceleration); // Apply negative gravity
+            }
+        }
+    }
+
     private void OnGrab(SelectEnterEventArgs args)
     {
         transform.SetParent(null);

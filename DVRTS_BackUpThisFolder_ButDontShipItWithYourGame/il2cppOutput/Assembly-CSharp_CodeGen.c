@@ -9,6 +9,7 @@
 
 extern void Dart_Awake_m78A177F97B462264687FF2BCDD587657F049B0B5 (void);
 extern void Dart_OnDestroy_m5D3F83959728FACC6E32883173F719F9C2AE9C18 (void);
+extern void Dart_FixedUpdate_m2430FCBD76B13DF4EC5B32B468EA035B3B75F7A2 (void);
 extern void Dart_OnGrab_mED723064B7DD19FAD805192F91AFDEB5914855AA (void);
 extern void Dart_OnRelease_m8E0DF4F5A3004EAC43DB944EBB3C73E49FF5BD64 (void);
 extern void Dart_OnCollisionEnter_m082D729D35D2B74B64CCBB16C79EC9A8206DABA1 (void);
@@ -42,6 +43,7 @@ extern void GameManager_add_OnTurnComplete_mF9544AF19E446E3CD248BF9D1C8D05323572
 extern void GameManager_remove_OnTurnComplete_m3ECBF5EBDD82A49DC0595B21FBFDB1892426487D (void);
 extern void GameManager_Awake_m4B6E8E2AF58C95C9A2A0C4637A34AE0892CB637F (void);
 extern void GameManager_Start_m87A71D65F3171A58DBDDBFB03832ADA65643D0E2 (void);
+extern void GameManager_SetReversedGravity_m1F49B6BF18754ADF67174AD4D45DB9E6384E3945 (void);
 extern void GameManager_RegisterThrow_m491FC5E85CF7F49B03100FA97316D7E9A2E207E1 (void);
 extern void GameManager_HandleBust_mBA005D16233AF31E7243C4E7F5BA7CE59336A63F (void);
 extern void GameManager_StartNewLeg_m64400CFEA1429A93A0D25FB752DE580594845142 (void);
@@ -209,10 +211,11 @@ extern void XRPokeFollowAffordanceFill_OnTransformTweenableVariableUpdated_m8B3C
 extern void XRPokeFollowAffordanceFill_OnPokeStrengthChanged_m480B681A9BE7B6C71724392FC3368A029EA4CED6 (void);
 extern void XRPokeFollowAffordanceFill_OnPokeStateDataUpdated_m6233708D9CEEA9A7920B821FDBD306F4D7CBFAE6 (void);
 extern void XRPokeFollowAffordanceFill__ctor_mAED1746F6E90C5676967671BFBB11E3B7C6B1E98 (void);
-static Il2CppMethodPointer s_methodPointers[202] = 
+static Il2CppMethodPointer s_methodPointers[204] = 
 {
 	Dart_Awake_m78A177F97B462264687FF2BCDD587657F049B0B5,
 	Dart_OnDestroy_m5D3F83959728FACC6E32883173F719F9C2AE9C18,
+	Dart_FixedUpdate_m2430FCBD76B13DF4EC5B32B468EA035B3B75F7A2,
 	Dart_OnGrab_mED723064B7DD19FAD805192F91AFDEB5914855AA,
 	Dart_OnRelease_m8E0DF4F5A3004EAC43DB944EBB3C73E49FF5BD64,
 	Dart_OnCollisionEnter_m082D729D35D2B74B64CCBB16C79EC9A8206DABA1,
@@ -246,6 +249,7 @@ static Il2CppMethodPointer s_methodPointers[202] =
 	GameManager_remove_OnTurnComplete_m3ECBF5EBDD82A49DC0595B21FBFDB1892426487D,
 	GameManager_Awake_m4B6E8E2AF58C95C9A2A0C4637A34AE0892CB637F,
 	GameManager_Start_m87A71D65F3171A58DBDDBFB03832ADA65643D0E2,
+	GameManager_SetReversedGravity_m1F49B6BF18754ADF67174AD4D45DB9E6384E3945,
 	GameManager_RegisterThrow_m491FC5E85CF7F49B03100FA97316D7E9A2E207E1,
 	GameManager_HandleBust_mBA005D16233AF31E7243C4E7F5BA7CE59336A63F,
 	GameManager_StartNewLeg_m64400CFEA1429A93A0D25FB752DE580594845142,
@@ -420,13 +424,14 @@ extern void TrackedRotation_SetBaseFromVector_m0CAD68507FD5C7AA3C7CAE09720645F03
 extern void TrackedRotation_SetTargetFromVector_m42F1586C38A41E0FB628220D326B1572BB8F80D7_AdjustorThunk (void);
 static Il2CppTokenAdjustorThunkPair s_adjustorThunks[4] = 
 {
-	{ 0x060000AE, TrackedRotation_get_totalOffset_mC129829FFE6CDD96C8885030BDAEF40D569F06C8_AdjustorThunk },
-	{ 0x060000AF, TrackedRotation_Reset_m54545DE2D01827833956AEC4324C136A0CB72425_AdjustorThunk },
-	{ 0x060000B0, TrackedRotation_SetBaseFromVector_m0CAD68507FD5C7AA3C7CAE09720645F033F1D26E_AdjustorThunk },
-	{ 0x060000B1, TrackedRotation_SetTargetFromVector_m42F1586C38A41E0FB628220D326B1572BB8F80D7_AdjustorThunk },
+	{ 0x060000B0, TrackedRotation_get_totalOffset_mC129829FFE6CDD96C8885030BDAEF40D569F06C8_AdjustorThunk },
+	{ 0x060000B1, TrackedRotation_Reset_m54545DE2D01827833956AEC4324C136A0CB72425_AdjustorThunk },
+	{ 0x060000B2, TrackedRotation_SetBaseFromVector_m0CAD68507FD5C7AA3C7CAE09720645F033F1D26E_AdjustorThunk },
+	{ 0x060000B3, TrackedRotation_SetTargetFromVector_m42F1586C38A41E0FB628220D326B1572BB8F80D7_AdjustorThunk },
 };
-static const int32_t s_InvokerIndices[202] = 
+static const int32_t s_InvokerIndices[204] = 
 {
+	15749,
 	15749,
 	15749,
 	11957,
@@ -462,6 +467,7 @@ static const int32_t s_InvokerIndices[202] =
 	11957,
 	15749,
 	15749,
+	11764,
 	5555,
 	15749,
 	15749,
@@ -634,7 +640,7 @@ IL2CPP_EXTERN_C const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule;
 const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule = 
 {
 	"Assembly-CSharp.dll",
-	202,
+	204,
 	s_methodPointers,
 	4,
 	s_adjustorThunks,
