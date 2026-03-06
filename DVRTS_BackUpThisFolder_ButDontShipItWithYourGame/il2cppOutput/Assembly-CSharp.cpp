@@ -134,6 +134,7 @@ struct UnityObjectReferenceCache_2_tE99191D5351A0E7FAC9799B6A790D4532F56BDC1;
 struct XRInputValueReader_1_t7482F990F323B5D373DF221174629A7C3EB97BC5;
 struct XRInputValueReader_1_t6B311BAB920F92BC851C1CD180A8555021DE8FC0;
 struct TMP_TextProcessingStack_1U5BU5D_t08293E0BB072311BB96170F351D1083BCA97B9B2;
+struct AudioClipU5BU5D_t916722468F7EDCFA833318C35CD7D41097D75D31;
 struct ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031;
 struct CharU5BU5D_t799905CF001DD5F13F7DBB310181FC4D8B7D0AAB;
 struct Color32U5BU5D_t38116C3E91765C4C5726CE12C77FAD7F9F737259;
@@ -315,6 +316,8 @@ struct XRInteractionManager_t93C7F7F0CFEAD83E1A70F92D05B0E663483746CD;
 struct XRKnob_t9F8C8CDD1A1F06D3AC23491C8C18C3C5E417F084;
 struct XRPokeFollowAffordanceFill_tFE5D1D7BCFD7B83B71C669393AA47EE9804D9599;
 struct XRScreenSpaceController_t046F18C2FE01EB347832DB82D42C84131771FF17;
+struct PCMReaderCallback_t3396D9613664F0AFF65FB91018FD0F901CC16F1E;
+struct PCMSetPositionCallback_t8D7135A2FB40647CAEC93F5254AD59E18DEB6072;
 struct U3CEndDelayU3Ed__12_t92A53E7D999E45108A7FDF7BCDB9359191100FE3;
 struct U3CStartDelayU3Ed__11_t30E319CCBE7D23E7026D92241D11DD660006B052;
 struct CullStateChangedEvent_t6073CD0D951EC1256BF74B8F9107D68FC89B99B8;
@@ -428,6 +431,7 @@ IL2CPP_EXTERN_C const RuntimeMethod* BindableVariableBase_1_Subscribe_m51C1D8B9E
 IL2CPP_EXTERN_C const RuntimeMethod* BindableVariableBase_1_Subscribe_mC4E18EDA53B1AF95B57D4D6976353EC198EA6608_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* BooleanToggleVisualsController_ToggleValueChanged_m02974DD38BDC57F1A93AEBD0BEA546C906782E83_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Component_GetComponentInParent_TisIPokeStateDataProvider_t14F2B731F2979D1138EB70A11E36F274A23DC91C_m56533D22EBBEEE60BD440ECE3B5EF450D8F5DE62_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Component_GetComponent_TisAudioSource_t871AC2272F896738252F04EE949AEF5B241D3299_m42DA4DEA19EB60D80CBED7413ADEB27FA033C77B_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Component_GetComponent_TisIXRSelectInteractable_t647A7E3382497396EA1A9546574AEC0FBC9BC4AF_mFC3F13E793001E7A507EA16C6EF20FBABAF56E46_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Component_GetComponent_TisLineRenderer_tEFEF960672DB69CB14B6D181FAE6292F0CF8B63D_m4F17B3CA1E7FFB03C7682312A59B9185E0F67C49_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Component_GetComponent_TisRigidbody_t268697F5A994213ED97393309870968BC1C7393C_m4B5CAD64B52D153BEA96432633CA9A45FA523DD8_RuntimeMethod_var;
@@ -484,6 +488,7 @@ struct Delegate_t_marshaled_pinvoke;
 struct Exception_t_marshaled_com;
 struct Exception_t_marshaled_pinvoke;
 
+struct AudioClipU5BU5D_t916722468F7EDCFA833318C35CD7D41097D75D31;
 struct ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031;
 struct ContactPointU5BU5D_t3570603E8D0685B71B3D8BA07031674B00C5E411;
 struct GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF;
@@ -1742,6 +1747,9 @@ struct TMP_TextProcessingStack_1_t243EA1B5D7FD2295D6533B953F0BBE8F52EFB8A0
 struct AnimationState_tC704F25A20169025B6CFDC2F00DC84152B5B73CE  : public TrackedReference_tF35FF4FB6E89ACD81C24469FAF0CA6FFF29262A2
 {
 };
+struct AudioResource_t35B84706031E4F08C928B1640B804839F4B6500A  : public Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C
+{
+};
 struct Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3  : public Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C
 {
 };
@@ -1952,6 +1960,11 @@ struct Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07  : public MulticastDeleg
 };
 struct AnimationClip_t00BD2F131D308A4AD2C6B0BF66644FC25FECE712  : public Motion_tBCD49FBF5608AD21FC03B63C8182FABCEF2707AC
 {
+};
+struct AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20  : public AudioResource_t35B84706031E4F08C928B1640B804839F4B6500A
+{
+	PCMReaderCallback_t3396D9613664F0AFF65FB91018FD0F901CC16F1E* ___m_PCMReaderCallback;
+	PCMSetPositionCallback_t8D7135A2FB40647CAEC93F5254AD59E18DEB6072* ___m_PCMSetPositionCallback;
 };
 struct Behaviour_t01970CFBBA658497AE30F311C447DB0440BAB7FA  : public Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3
 {
@@ -2260,6 +2273,9 @@ struct TweenableVariableAsyncBase_1_tBC224ABEF15BBD66D75B9D20BED7ADB1F273E430  :
 struct Animation_t6593B06C39E3B139808B19F2C719C860F3F61040  : public Behaviour_t01970CFBBA658497AE30F311C447DB0440BAB7FA
 {
 };
+struct AudioBehaviour_t2DC0BEF7B020C952F3D2DA5AAAC88501C7EEB941  : public Behaviour_t01970CFBBA658497AE30F311C447DB0440BAB7FA
+{
+};
 struct LineRenderer_tEFEF960672DB69CB14B6D181FAE6292F0CF8B63D  : public Renderer_t320575F223BCB177A982E5DDB5DB19FAA89E7FBF
 {
 };
@@ -2308,6 +2324,9 @@ struct AnchorVisuals_t506C676A735B94AD2F7832EDF49F77B8564E573A  : public MonoBeh
 	Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* ___m_ArrowCoroutine;
 	Vector3TweenableVariable_t0DF651B487F89825D0D459293C4A862C62C0EBD5* ___m_ArrowHeight;
 	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___m_InitialArrowScale;
+};
+struct AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299  : public AudioBehaviour_t2DC0BEF7B020C952F3D2DA5AAAC88501C7EEB941
+{
 };
 struct BezierCurve_t43BBB6AA7BF6D3B9638D5CBB500FC809A7AF2AC2  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
 {
@@ -2364,7 +2383,9 @@ struct Dart_t36C22C02EDDF68BD271B09B3D06F08D148A8BCC4  : public MonoBehaviour_t5
 {
 	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___tip;
 	LayerMask_t97CB6BDADEDC3D6423C7BCFEA7F86DA2EC6241DB ___boardLayerMask;
+	AudioClipU5BU5D_t916722468F7EDCFA833318C35CD7D41097D75D31* ___stickSounds;
 	Rigidbody_t268697F5A994213ED97393309870968BC1C7393C* ___rb;
+	AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* ___audioSource;
 	XRGrabInteractable_tAE7E2F24377399C9B5159179E4B43EA6AA55531B* ___grab;
 	bool ___hasStuck;
 	bool ___isThrown;
@@ -3433,6 +3454,40 @@ struct ContactPointU5BU5D_t3570603E8D0685B71B3D8BA07031674B00C5E411  : public Ru
 		m_Items[index] = value;
 	}
 };
+struct AudioClipU5BU5D_t916722468F7EDCFA833318C35CD7D41097D75D31  : public RuntimeArray
+{
+	ALIGN_FIELD (8) AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* m_Items[1];
+
+	inline AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* GetAt(il2cpp_array_size_t index) const
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items[index];
+	}
+	inline AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20** GetAddressAt(il2cpp_array_size_t index)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items + index;
+	}
+	inline void SetAt(il2cpp_array_size_t index, AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* value)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		m_Items[index] = value;
+		Il2CppCodeGenWriteBarrier((void**)m_Items + index, (void*)value);
+	}
+	inline AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* GetAtUnchecked(il2cpp_array_size_t index) const
+	{
+		return m_Items[index];
+	}
+	inline AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20** GetAddressAtUnchecked(il2cpp_array_size_t index)
+	{
+		return m_Items + index;
+	}
+	inline void SetAtUnchecked(il2cpp_array_size_t index, AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* value)
+	{
+		m_Items[index] = value;
+		Il2CppCodeGenWriteBarrier((void**)m_Items + index, (void*)value);
+	}
+};
 struct StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248  : public RuntimeArray
 {
 	ALIGN_FIELD (8) String_t* m_Items[1];
@@ -3704,6 +3759,10 @@ inline Rigidbody_t268697F5A994213ED97393309870968BC1C7393C* Component_GetCompone
 {
 	return ((  Rigidbody_t268697F5A994213ED97393309870968BC1C7393C* (*) (Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3*, const RuntimeMethod*))Component_GetComponent_TisRuntimeObject_m7181F81CAEC2CF53F5D2BC79B7425C16E1F80D33_gshared)(__this, method);
 }
+inline AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* Component_GetComponent_TisAudioSource_t871AC2272F896738252F04EE949AEF5B241D3299_m42DA4DEA19EB60D80CBED7413ADEB27FA033C77B (Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3* __this, const RuntimeMethod* method)
+{
+	return ((  AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* (*) (Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3*, const RuntimeMethod*))Component_GetComponent_TisRuntimeObject_m7181F81CAEC2CF53F5D2BC79B7425C16E1F80D33_gshared)(__this, method);
+}
 inline XRGrabInteractable_tAE7E2F24377399C9B5159179E4B43EA6AA55531B* Component_GetComponent_TisXRGrabInteractable_tAE7E2F24377399C9B5159179E4B43EA6AA55531B_m49377F1D0DBAB9BDC59DFC6851E9A5D687717C14 (Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3* __this, const RuntimeMethod* method)
 {
 	return ((  XRGrabInteractable_tAE7E2F24377399C9B5159179E4B43EA6AA55531B* (*) (Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3*, const RuntimeMethod*))Component_GetComponent_TisRuntimeObject_m7181F81CAEC2CF53F5D2BC79B7425C16E1F80D33_gshared)(__this, method);
@@ -3755,6 +3814,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ContactPointU5BU5D_t3570603E8D0685B71B3D8BA07
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ContactPoint_get_normal_mD7F0567CA2FD68644F7C6FE318E10C4D15F92AD6 (ContactPoint_t241857959C0D517C21F541BB04B63FA6C1EAB3F9* __this, const RuntimeMethod* method) ;
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_op_UnaryNegation_m5450829F333BD2A88AF9A592C4EE331661225915_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_a, const RuntimeMethod* method) ;
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Vector3_Dot_mBB86BB940AA0A32FA7D3C02AC42E5BC7095A5D52_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_lhs, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___1_rhs, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Random_Range_m6763D9767F033357F88B6637F048F4ACA4123B68 (int32_t ___0_minInclusive, int32_t ___1_maxExclusive, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AudioSource_PlayOneShot_m098BCAE084AABB128BB19ED805D2D985E7B75112 (AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* __this, AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* ___0_clip, const RuntimeMethod* method) ;
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_get_zero_m0C1249C3F25B1C70EAD3CC8B31259975A457AE39_inline (const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Rigidbody_set_linearVelocity_m29AE03D5FC079EAD4202FCF72E2AEBDC19363985 (Rigidbody_t268697F5A994213ED97393309870968BC1C7393C* __this, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_value, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Rigidbody_set_angularVelocity_m23266B4E52BF0D2E65CC984AC73CC40B8D4A27E0 (Rigidbody_t268697F5A994213ED97393309870968BC1C7393C* __this, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_value, const RuntimeMethod* method) ;
@@ -4132,6 +4193,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Dart_Awake_m78A177F97B462264687FF2BCDD58
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Component_GetComponent_TisAudioSource_t871AC2272F896738252F04EE949AEF5B241D3299_m42DA4DEA19EB60D80CBED7413ADEB27FA033C77B_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Component_GetComponent_TisRigidbody_t268697F5A994213ED97393309870968BC1C7393C_m4B5CAD64B52D153BEA96432633CA9A45FA523DD8_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Component_GetComponent_TisXRGrabInteractable_tAE7E2F24377399C9B5159179E4B43EA6AA55531B_m49377F1D0DBAB9BDC59DFC6851E9A5D687717C14_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Dart_OnGrab_mED723064B7DD19FAD805192F91AFDEB5914855AA_RuntimeMethod_var);
@@ -4143,35 +4205,40 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Dart_Awake_m78A177F97B462264687FF2BCDD58
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/Dart.cs:16>
+		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/Dart.cs:18>
 		Rigidbody_t268697F5A994213ED97393309870968BC1C7393C* L_0;
 		L_0 = Component_GetComponent_TisRigidbody_t268697F5A994213ED97393309870968BC1C7393C_m4B5CAD64B52D153BEA96432633CA9A45FA523DD8(__this, Component_GetComponent_TisRigidbody_t268697F5A994213ED97393309870968BC1C7393C_m4B5CAD64B52D153BEA96432633CA9A45FA523DD8_RuntimeMethod_var);
 		__this->___rb = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___rb), (void*)L_0);
-		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/Dart.cs:17>
-		XRGrabInteractable_tAE7E2F24377399C9B5159179E4B43EA6AA55531B* L_1;
-		L_1 = Component_GetComponent_TisXRGrabInteractable_tAE7E2F24377399C9B5159179E4B43EA6AA55531B_m49377F1D0DBAB9BDC59DFC6851E9A5D687717C14(__this, Component_GetComponent_TisXRGrabInteractable_tAE7E2F24377399C9B5159179E4B43EA6AA55531B_m49377F1D0DBAB9BDC59DFC6851E9A5D687717C14_RuntimeMethod_var);
-		__this->___grab = L_1;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___grab), (void*)L_1);
-		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/Dart.cs:18>
-		XRGrabInteractable_tAE7E2F24377399C9B5159179E4B43EA6AA55531B* L_2 = __this->___grab;
-		NullCheck(L_2);
-		SelectEnterEvent_tBA2614C8C25D8794D5804C4F66195D74E64FC5D0* L_3;
-		L_3 = XRBaseInteractable_get_selectEntered_m07EED7E3339456AF56A5C5BF7F5F96A3FDB107C0_inline(L_2, NULL);
-		UnityAction_1_t6D7C8D94300AACA6B0CFB2228AA5572CFBF0531B* L_4 = (UnityAction_1_t6D7C8D94300AACA6B0CFB2228AA5572CFBF0531B*)il2cpp_codegen_object_new(UnityAction_1_t6D7C8D94300AACA6B0CFB2228AA5572CFBF0531B_il2cpp_TypeInfo_var);
-		UnityAction_1__ctor_mEE39E1A87376378311B4931978E8E07E589E9A24(L_4, __this, (intptr_t)((void*)Dart_OnGrab_mED723064B7DD19FAD805192F91AFDEB5914855AA_RuntimeMethod_var), NULL);
-		NullCheck(L_3);
-		UnityEvent_1_AddListener_mAE71681FB0832FD7DBA813E5ADDBA574EA32EED2(L_3, L_4, UnityEvent_1_AddListener_mAE71681FB0832FD7DBA813E5ADDBA574EA32EED2_RuntimeMethod_var);
 		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/Dart.cs:19>
-		XRGrabInteractable_tAE7E2F24377399C9B5159179E4B43EA6AA55531B* L_5 = __this->___grab;
-		NullCheck(L_5);
-		SelectExitEvent_t15DC0A39F9657BA9E6BAE6250D8D64C9671201F6* L_6;
-		L_6 = XRBaseInteractable_get_selectExited_m0296CEBB4427F63D460984FC32FA0C9C7ACED5A7_inline(L_5, NULL);
-		UnityAction_1_tD4A8B5CFDB30ABDE869D801066212B20B4D61D6E* L_7 = (UnityAction_1_tD4A8B5CFDB30ABDE869D801066212B20B4D61D6E*)il2cpp_codegen_object_new(UnityAction_1_tD4A8B5CFDB30ABDE869D801066212B20B4D61D6E_il2cpp_TypeInfo_var);
-		UnityAction_1__ctor_mD74501F5FCCC37863163D5E7155B6C8B9B366C40(L_7, __this, (intptr_t)((void*)Dart_OnRelease_m8E0DF4F5A3004EAC43DB944EBB3C73E49FF5BD64_RuntimeMethod_var), NULL);
-		NullCheck(L_6);
-		UnityEvent_1_AddListener_mB662756036996A6B6F83F6492CE9E26797AF9602(L_6, L_7, UnityEvent_1_AddListener_mB662756036996A6B6F83F6492CE9E26797AF9602_RuntimeMethod_var);
+		AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* L_1;
+		L_1 = Component_GetComponent_TisAudioSource_t871AC2272F896738252F04EE949AEF5B241D3299_m42DA4DEA19EB60D80CBED7413ADEB27FA033C77B(__this, Component_GetComponent_TisAudioSource_t871AC2272F896738252F04EE949AEF5B241D3299_m42DA4DEA19EB60D80CBED7413ADEB27FA033C77B_RuntimeMethod_var);
+		__this->___audioSource = L_1;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___audioSource), (void*)L_1);
 		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/Dart.cs:20>
+		XRGrabInteractable_tAE7E2F24377399C9B5159179E4B43EA6AA55531B* L_2;
+		L_2 = Component_GetComponent_TisXRGrabInteractable_tAE7E2F24377399C9B5159179E4B43EA6AA55531B_m49377F1D0DBAB9BDC59DFC6851E9A5D687717C14(__this, Component_GetComponent_TisXRGrabInteractable_tAE7E2F24377399C9B5159179E4B43EA6AA55531B_m49377F1D0DBAB9BDC59DFC6851E9A5D687717C14_RuntimeMethod_var);
+		__this->___grab = L_2;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___grab), (void*)L_2);
+		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/Dart.cs:21>
+		XRGrabInteractable_tAE7E2F24377399C9B5159179E4B43EA6AA55531B* L_3 = __this->___grab;
+		NullCheck(L_3);
+		SelectEnterEvent_tBA2614C8C25D8794D5804C4F66195D74E64FC5D0* L_4;
+		L_4 = XRBaseInteractable_get_selectEntered_m07EED7E3339456AF56A5C5BF7F5F96A3FDB107C0_inline(L_3, NULL);
+		UnityAction_1_t6D7C8D94300AACA6B0CFB2228AA5572CFBF0531B* L_5 = (UnityAction_1_t6D7C8D94300AACA6B0CFB2228AA5572CFBF0531B*)il2cpp_codegen_object_new(UnityAction_1_t6D7C8D94300AACA6B0CFB2228AA5572CFBF0531B_il2cpp_TypeInfo_var);
+		UnityAction_1__ctor_mEE39E1A87376378311B4931978E8E07E589E9A24(L_5, __this, (intptr_t)((void*)Dart_OnGrab_mED723064B7DD19FAD805192F91AFDEB5914855AA_RuntimeMethod_var), NULL);
+		NullCheck(L_4);
+		UnityEvent_1_AddListener_mAE71681FB0832FD7DBA813E5ADDBA574EA32EED2(L_4, L_5, UnityEvent_1_AddListener_mAE71681FB0832FD7DBA813E5ADDBA574EA32EED2_RuntimeMethod_var);
+		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/Dart.cs:22>
+		XRGrabInteractable_tAE7E2F24377399C9B5159179E4B43EA6AA55531B* L_6 = __this->___grab;
+		NullCheck(L_6);
+		SelectExitEvent_t15DC0A39F9657BA9E6BAE6250D8D64C9671201F6* L_7;
+		L_7 = XRBaseInteractable_get_selectExited_m0296CEBB4427F63D460984FC32FA0C9C7ACED5A7_inline(L_6, NULL);
+		UnityAction_1_tD4A8B5CFDB30ABDE869D801066212B20B4D61D6E* L_8 = (UnityAction_1_tD4A8B5CFDB30ABDE869D801066212B20B4D61D6E*)il2cpp_codegen_object_new(UnityAction_1_tD4A8B5CFDB30ABDE869D801066212B20B4D61D6E_il2cpp_TypeInfo_var);
+		UnityAction_1__ctor_mD74501F5FCCC37863163D5E7155B6C8B9B366C40(L_8, __this, (intptr_t)((void*)Dart_OnRelease_m8E0DF4F5A3004EAC43DB944EBB3C73E49FF5BD64_RuntimeMethod_var), NULL);
+		NullCheck(L_7);
+		UnityEvent_1_AddListener_mB662756036996A6B6F83F6492CE9E26797AF9602(L_7, L_8, UnityEvent_1_AddListener_mB662756036996A6B6F83F6492CE9E26797AF9602_RuntimeMethod_var);
+		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/Dart.cs:23>
 		return;
 	}
 }
@@ -4190,7 +4257,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Dart_OnDestroy_m5D3F83959728FACC6E328831
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/Dart.cs:24>
+		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/Dart.cs:27>
 		XRGrabInteractable_tAE7E2F24377399C9B5159179E4B43EA6AA55531B* L_0 = __this->___grab;
 		NullCheck(L_0);
 		SelectEnterEvent_tBA2614C8C25D8794D5804C4F66195D74E64FC5D0* L_1;
@@ -4199,7 +4266,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Dart_OnDestroy_m5D3F83959728FACC6E328831
 		UnityAction_1__ctor_mEE39E1A87376378311B4931978E8E07E589E9A24(L_2, __this, (intptr_t)((void*)Dart_OnGrab_mED723064B7DD19FAD805192F91AFDEB5914855AA_RuntimeMethod_var), NULL);
 		NullCheck(L_1);
 		UnityEvent_1_RemoveListener_m1008B118B379B498B23E13BB88779719C22EB9EB(L_1, L_2, UnityEvent_1_RemoveListener_m1008B118B379B498B23E13BB88779719C22EB9EB_RuntimeMethod_var);
-		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/Dart.cs:25>
+		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/Dart.cs:28>
 		XRGrabInteractable_tAE7E2F24377399C9B5159179E4B43EA6AA55531B* L_3 = __this->___grab;
 		NullCheck(L_3);
 		SelectExitEvent_t15DC0A39F9657BA9E6BAE6250D8D64C9671201F6* L_4;
@@ -4208,7 +4275,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Dart_OnDestroy_m5D3F83959728FACC6E328831
 		UnityAction_1__ctor_mD74501F5FCCC37863163D5E7155B6C8B9B366C40(L_5, __this, (intptr_t)((void*)Dart_OnRelease_m8E0DF4F5A3004EAC43DB944EBB3C73E49FF5BD64_RuntimeMethod_var), NULL);
 		NullCheck(L_4);
 		UnityEvent_1_RemoveListener_m4353C3D43531002B6FBE7556246DB0A261672F9B(L_4, L_5, UnityEvent_1_RemoveListener_m4353C3D43531002B6FBE7556246DB0A261672F9B_RuntimeMethod_var);
-		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/Dart.cs:26>
+		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/Dart.cs:29>
 		return;
 	}
 }
@@ -4216,24 +4283,24 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Dart_OnDestroy_m5D3F83959728FACC6E328831
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Dart_OnGrab_mED723064B7DD19FAD805192F91AFDEB5914855AA (Dart_t36C22C02EDDF68BD271B09B3D06F08D148A8BCC4* __this, SelectEnterEventArgs_t9220B1E6A9BB5A847C0476949ACE0182430BB938* ___0_args, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/Dart.cs:30>
+		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/Dart.cs:33>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_0;
 		L_0 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
 		NullCheck(L_0);
 		Transform_SetParent_m6677538B60246D958DD91F931C50F969CCBB5250(L_0, (Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1*)NULL, NULL);
-		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/Dart.cs:31>
+		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/Dart.cs:34>
 		Rigidbody_t268697F5A994213ED97393309870968BC1C7393C* L_1 = __this->___rb;
 		NullCheck(L_1);
 		Rigidbody_set_constraints_mE81BF0DAEB980E320538231E092CA4663885A9A3(L_1, 0, NULL);
-		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/Dart.cs:32>
+		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/Dart.cs:35>
 		Rigidbody_t268697F5A994213ED97393309870968BC1C7393C* L_2 = __this->___rb;
 		NullCheck(L_2);
 		Rigidbody_set_isKinematic_m6C3FD3EA358DADA3B191F2449CF1C4F8B22695ED(L_2, (bool)0, NULL);
-		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/Dart.cs:33>
+		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/Dart.cs:36>
 		__this->___hasStuck = (bool)0;
-		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/Dart.cs:34>
+		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/Dart.cs:37>
 		__this->___isThrown = (bool)0;
-		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/Dart.cs:35>
+		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/Dart.cs:38>
 		return;
 	}
 }
@@ -4247,11 +4314,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Dart_OnRelease_m8E0DF4F5A3004EAC43DB944E
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/Dart.cs:39>
+		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/Dart.cs:42>
 		__this->___isThrown = (bool)1;
-		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/Dart.cs:40>
+		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/Dart.cs:43>
 		Component_set_tag_mAF8B6EC052F8AA67088F1841B57EA37F13D0451E(__this, _stringLiteral450E07D10C716C8D3A068FEC693190DA584C87CC, NULL);
-		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/Dart.cs:41>
+		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/Dart.cs:44>
 		return;
 	}
 }
@@ -4274,12 +4341,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Dart_OnCollisionEnter_m082D729D35D2B74B6
 	memset((&V_1), 0, sizeof(V_1));
 	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_2;
 	memset((&V_2), 0, sizeof(V_2));
-	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_3;
-	memset((&V_3), 0, sizeof(V_3));
-	RaycastHit_t6F30BD0B38B56401CA833A1B87BD74F2ACD2F2B5 V_4;
+	int32_t V_3 = 0;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_4;
 	memset((&V_4), 0, sizeof(V_4));
+	RaycastHit_t6F30BD0B38B56401CA833A1B87BD74F2ACD2F2B5 V_5;
+	memset((&V_5), 0, sizeof(V_5));
 	{
-		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/Dart.cs:45>
+		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/Dart.cs:48>
 		bool L_0 = __this->___hasStuck;
 		if (L_0)
 		{
@@ -4296,13 +4364,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Dart_OnCollisionEnter_m082D729D35D2B74B6
 
 IL_0010:
 	{
-		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/Dart.cs:45>
+		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/Dart.cs:48>
 		return;
 	}
 
 IL_0011:
 	{
-		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/Dart.cs:47>
+		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/Dart.cs:50>
 		Collision_tBCC6AEBD9A63E6DA2E50660DAC03CDCB1FF7A9B0* L_2 = ___0_collision;
 		NullCheck(L_2);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_3;
@@ -4311,7 +4379,7 @@ IL_0011:
 		DartZone_t5C3FEAF1B47A15B5722CE0BF51796F5B18AA760A* L_4;
 		L_4 = GameObject_GetComponent_TisDartZone_t5C3FEAF1B47A15B5722CE0BF51796F5B18AA760A_m2984935E6BF3A1E85E13807A667AED4812081BF2(L_3, GameObject_GetComponent_TisDartZone_t5C3FEAF1B47A15B5722CE0BF51796F5B18AA760A_m2984935E6BF3A1E85E13807A667AED4812081BF2_RuntimeMethod_var);
 		V_0 = L_4;
-		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/Dart.cs:48>
+		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/Dart.cs:51>
 		DartZone_t5C3FEAF1B47A15B5722CE0BF51796F5B18AA760A* L_5 = V_0;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_6;
@@ -4322,14 +4390,14 @@ IL_0011:
 		}
 	}
 	{
-		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/Dart.cs:50>
+		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/Dart.cs:53>
 		__this->___isThrown = (bool)0;
-		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/Dart.cs:51>
+		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/Dart.cs:54>
 		GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* L_7;
 		L_7 = GameManager_get_Instance_m076FE4D98E785B5AEE0B4C360C7857F824E7FBD0_inline(NULL);
 		NullCheck(L_7);
 		GameManager_RegisterThrow_m491FC5E85CF7F49B03100FA97316D7E9A2E207E1(L_7, 0, 3, NULL);
-		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/Dart.cs:52>
+		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/Dart.cs:55>
 		Collision_tBCC6AEBD9A63E6DA2E50660DAC03CDCB1FF7A9B0* L_8 = ___0_collision;
 		NullCheck(L_8);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_9;
@@ -4341,19 +4409,19 @@ IL_0011:
 		L_11 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(_stringLiteral80FEB0648B6EB31842AE2186FE58D7C305720E87, L_10, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_11, NULL);
-		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/Dart.cs:53>
+		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/Dart.cs:56>
 		return;
 	}
 
 IL_0054:
 	{
-		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/Dart.cs:56>
+		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/Dart.cs:59>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_12 = __this->___tip;
 		NullCheck(L_12);
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_13;
 		L_13 = Transform_get_right_mC6DC057C23313802E2186A9E0DB760D795A758A4(L_12, NULL);
 		V_1 = L_13;
-		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/Dart.cs:57>
+		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/Dart.cs:60>
 		Collision_tBCC6AEBD9A63E6DA2E50660DAC03CDCB1FF7A9B0* L_14 = ___0_collision;
 		NullCheck(L_14);
 		ContactPointU5BU5D_t3570603E8D0685B71B3D8BA07031674B00C5E411* L_15;
@@ -4362,150 +4430,165 @@ IL_0054:
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_16;
 		L_16 = ContactPoint_get_normal_mD7F0567CA2FD68644F7C6FE318E10C4D15F92AD6(((L_15)->GetAddressAt(static_cast<il2cpp_array_size_t>(0))), NULL);
 		V_2 = L_16;
-		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/Dart.cs:58>
+		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/Dart.cs:61>
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_17 = V_1;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_18 = V_2;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_19;
 		L_19 = Vector3_op_UnaryNegation_m5450829F333BD2A88AF9A592C4EE331661225915_inline(L_18, NULL);
 		float L_20;
 		L_20 = Vector3_Dot_mBB86BB940AA0A32FA7D3C02AC42E5BC7095A5D52_inline(L_17, L_19, NULL);
-		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/Dart.cs:59>
+		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/Dart.cs:62>
 		if ((!(((float)L_20) < ((float)(0.699999988f)))))
 		{
 			goto IL_0086;
 		}
 	}
 	{
-		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/Dart.cs:59>
+		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/Dart.cs:62>
 		return;
 	}
 
 IL_0086:
 	{
-		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/Dart.cs:61>
-		__this->___hasStuck = (bool)1;
-		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/Dart.cs:62>
-		__this->___isThrown = (bool)0;
 		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/Dart.cs:64>
-		Rigidbody_t268697F5A994213ED97393309870968BC1C7393C* L_21 = __this->___rb;
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_22;
-		L_22 = Vector3_get_zero_m0C1249C3F25B1C70EAD3CC8B31259975A457AE39_inline(NULL);
-		NullCheck(L_21);
-		Rigidbody_set_linearVelocity_m29AE03D5FC079EAD4202FCF72E2AEBDC19363985(L_21, L_22, NULL);
+		__this->___hasStuck = (bool)1;
 		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/Dart.cs:65>
-		Rigidbody_t268697F5A994213ED97393309870968BC1C7393C* L_23 = __this->___rb;
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_24;
-		L_24 = Vector3_get_zero_m0C1249C3F25B1C70EAD3CC8B31259975A457AE39_inline(NULL);
-		NullCheck(L_23);
-		Rigidbody_set_angularVelocity_m23266B4E52BF0D2E65CC984AC73CC40B8D4A27E0(L_23, L_24, NULL);
+		AudioClipU5BU5D_t916722468F7EDCFA833318C35CD7D41097D75D31* L_21 = __this->___stickSounds;
+		NullCheck(L_21);
+		int32_t L_22;
+		L_22 = Random_Range_m6763D9767F033357F88B6637F048F4ACA4123B68(0, ((int32_t)(((RuntimeArray*)L_21)->max_length)), NULL);
+		V_3 = L_22;
 		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/Dart.cs:66>
-		Rigidbody_t268697F5A994213ED97393309870968BC1C7393C* L_25 = __this->___rb;
-		NullCheck(L_25);
-		Rigidbody_set_constraints_mE81BF0DAEB980E320538231E092CA4663885A9A3(L_25, ((int32_t)126), NULL);
+		AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* L_23 = __this->___audioSource;
+		AudioClipU5BU5D_t916722468F7EDCFA833318C35CD7D41097D75D31* L_24 = __this->___stickSounds;
+		int32_t L_25 = V_3;
+		NullCheck(L_24);
+		int32_t L_26 = L_25;
+		AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* L_27 = (L_24)->GetAt(static_cast<il2cpp_array_size_t>(L_26));
+		NullCheck(L_23);
+		AudioSource_PlayOneShot_m098BCAE084AABB128BB19ED805D2D985E7B75112(L_23, L_27, NULL);
 		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/Dart.cs:68>
-		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_26 = __this->___tip;
-		NullCheck(L_26);
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_27;
-		L_27 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_26, NULL);
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_28 = V_1;
+		__this->___isThrown = (bool)0;
+		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/Dart.cs:70>
+		Rigidbody_t268697F5A994213ED97393309870968BC1C7393C* L_28 = __this->___rb;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_29;
-		L_29 = Vector3_op_Multiply_m87BA7C578F96C8E49BB07088DAAC4649F83B0353_inline(L_28, (0.0500000007f), NULL);
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_30;
-		L_30 = Vector3_op_Subtraction_mE42023FF80067CB44A1D4A27EB7CF2B24CABB828_inline(L_27, L_29, NULL);
-		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/Dart.cs:69>
-		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_31 = __this->___tip;
-		NullCheck(L_31);
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_32;
-		L_32 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_31, NULL);
-		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_33;
-		L_33 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
+		L_29 = Vector3_get_zero_m0C1249C3F25B1C70EAD3CC8B31259975A457AE39_inline(NULL);
+		NullCheck(L_28);
+		Rigidbody_set_linearVelocity_m29AE03D5FC079EAD4202FCF72E2AEBDC19363985(L_28, L_29, NULL);
+		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/Dart.cs:71>
+		Rigidbody_t268697F5A994213ED97393309870968BC1C7393C* L_30 = __this->___rb;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_31;
+		L_31 = Vector3_get_zero_m0C1249C3F25B1C70EAD3CC8B31259975A457AE39_inline(NULL);
+		NullCheck(L_30);
+		Rigidbody_set_angularVelocity_m23266B4E52BF0D2E65CC984AC73CC40B8D4A27E0(L_30, L_31, NULL);
+		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/Dart.cs:72>
+		Rigidbody_t268697F5A994213ED97393309870968BC1C7393C* L_32 = __this->___rb;
+		NullCheck(L_32);
+		Rigidbody_set_constraints_mE81BF0DAEB980E320538231E092CA4663885A9A3(L_32, ((int32_t)126), NULL);
+		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/Dart.cs:74>
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_33 = __this->___tip;
 		NullCheck(L_33);
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_34;
 		L_34 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_33, NULL);
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_35;
-		L_35 = Vector3_op_Subtraction_mE42023FF80067CB44A1D4A27EB7CF2B24CABB828_inline(L_32, L_34, NULL);
-		V_3 = L_35;
-		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/Dart.cs:71>
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_36 = V_1;
-		LayerMask_t97CB6BDADEDC3D6423C7BCFEA7F86DA2EC6241DB L_37 = __this->___boardLayerMask;
-		int32_t L_38;
-		L_38 = LayerMask_op_Implicit_m7F5A5B9D079281AC445ED39DEE1FCFA9D795810D(L_37, NULL);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_35 = V_1;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_36;
+		L_36 = Vector3_op_Multiply_m87BA7C578F96C8E49BB07088DAAC4649F83B0353_inline(L_35, (0.0500000007f), NULL);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_37;
+		L_37 = Vector3_op_Subtraction_mE42023FF80067CB44A1D4A27EB7CF2B24CABB828_inline(L_34, L_36, NULL);
+		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/Dart.cs:75>
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_38 = __this->___tip;
+		NullCheck(L_38);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_39;
+		L_39 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_38, NULL);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_40;
+		L_40 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
+		NullCheck(L_40);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_41;
+		L_41 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_40, NULL);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_42;
+		L_42 = Vector3_op_Subtraction_mE42023FF80067CB44A1D4A27EB7CF2B24CABB828_inline(L_39, L_41, NULL);
+		V_4 = L_42;
+		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/Dart.cs:77>
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_43 = V_1;
+		LayerMask_t97CB6BDADEDC3D6423C7BCFEA7F86DA2EC6241DB L_44 = __this->___boardLayerMask;
+		int32_t L_45;
+		L_45 = LayerMask_op_Implicit_m7F5A5B9D079281AC445ED39DEE1FCFA9D795810D(L_44, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Physics_t1244C2983AEAFA149425AFFC3DF53BC91C18ED56_il2cpp_TypeInfo_var);
-		bool L_39;
-		L_39 = Physics_Raycast_m56120FFEF0D4F0A44CCA505B5C946E6FB8742F12(L_30, L_36, (&V_4), (0.150000006f), L_38, NULL);
-		if (!L_39)
+		bool L_46;
+		L_46 = Physics_Raycast_m56120FFEF0D4F0A44CCA505B5C946E6FB8742F12(L_37, L_43, (&V_5), (0.150000006f), L_45, NULL);
+		if (!L_46)
 		{
-			goto IL_012c;
+			goto IL_0150;
 		}
 	}
 	{
-		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/Dart.cs:72>
-		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_40;
-		L_40 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_41;
-		L_41 = RaycastHit_get_point_m02B764612562AFE0F998CC7CFB2EEDE41BA47F39((&V_4), NULL);
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_42 = V_3;
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_43;
-		L_43 = Vector3_op_Subtraction_mE42023FF80067CB44A1D4A27EB7CF2B24CABB828_inline(L_41, L_42, NULL);
-		NullCheck(L_40);
-		Transform_set_position_mA1A817124BB41B685043DED2A9BA48CDF37C4156(L_40, L_43, NULL);
-		goto IL_014e;
-	}
-
-IL_012c:
-	{
-		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/Dart.cs:74>
-		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_44;
-		L_44 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
-		Collision_tBCC6AEBD9A63E6DA2E50660DAC03CDCB1FF7A9B0* L_45 = ___0_collision;
-		NullCheck(L_45);
-		ContactPointU5BU5D_t3570603E8D0685B71B3D8BA07031674B00C5E411* L_46;
-		L_46 = Collision_get_contacts_m2E8E27E0399230DFA4303A4F4D81C1BD55CBC473(L_45, NULL);
-		NullCheck(L_46);
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_47;
-		L_47 = ContactPoint_get_point_mCCDFDACC5D8DB469898060A56A3CC45132911208(((L_46)->GetAddressAt(static_cast<il2cpp_array_size_t>(0))), NULL);
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_48 = V_3;
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_49;
-		L_49 = Vector3_op_Subtraction_mE42023FF80067CB44A1D4A27EB7CF2B24CABB828_inline(L_47, L_48, NULL);
-		NullCheck(L_44);
-		Transform_set_position_mA1A817124BB41B685043DED2A9BA48CDF37C4156(L_44, L_49, NULL);
-	}
-
-IL_014e:
-	{
-		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/Dart.cs:76>
-		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_50;
-		L_50 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
-		DartZone_t5C3FEAF1B47A15B5722CE0BF51796F5B18AA760A* L_51 = V_0;
-		NullCheck(L_51);
-		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_52;
-		L_52 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_51, NULL);
-		NullCheck(L_50);
-		Transform_SetParent_m6677538B60246D958DD91F931C50F969CCBB5250(L_50, L_52, NULL);
-		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/Dart.cs:77>
-		GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* L_53;
-		L_53 = GameManager_get_Instance_m076FE4D98E785B5AEE0B4C360C7857F824E7FBD0_inline(NULL);
-		DartZone_t5C3FEAF1B47A15B5722CE0BF51796F5B18AA760A* L_54 = V_0;
-		NullCheck(L_54);
-		int32_t L_55 = L_54->___score;
-		DartZone_t5C3FEAF1B47A15B5722CE0BF51796F5B18AA760A* L_56 = V_0;
-		NullCheck(L_56);
-		int32_t L_57 = L_56->___type;
-		NullCheck(L_53);
-		GameManager_RegisterThrow_m491FC5E85CF7F49B03100FA97316D7E9A2E207E1(L_53, L_55, L_57, NULL);
 		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/Dart.cs:78>
-		Collision_tBCC6AEBD9A63E6DA2E50660DAC03CDCB1FF7A9B0* L_58 = ___0_collision;
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_47;
+		L_47 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_48;
+		L_48 = RaycastHit_get_point_m02B764612562AFE0F998CC7CFB2EEDE41BA47F39((&V_5), NULL);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_49 = V_4;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_50;
+		L_50 = Vector3_op_Subtraction_mE42023FF80067CB44A1D4A27EB7CF2B24CABB828_inline(L_48, L_49, NULL);
+		NullCheck(L_47);
+		Transform_set_position_mA1A817124BB41B685043DED2A9BA48CDF37C4156(L_47, L_50, NULL);
+		goto IL_0173;
+	}
+
+IL_0150:
+	{
+		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/Dart.cs:80>
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_51;
+		L_51 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
+		Collision_tBCC6AEBD9A63E6DA2E50660DAC03CDCB1FF7A9B0* L_52 = ___0_collision;
+		NullCheck(L_52);
+		ContactPointU5BU5D_t3570603E8D0685B71B3D8BA07031674B00C5E411* L_53;
+		L_53 = Collision_get_contacts_m2E8E27E0399230DFA4303A4F4D81C1BD55CBC473(L_52, NULL);
+		NullCheck(L_53);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_54;
+		L_54 = ContactPoint_get_point_mCCDFDACC5D8DB469898060A56A3CC45132911208(((L_53)->GetAddressAt(static_cast<il2cpp_array_size_t>(0))), NULL);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_55 = V_4;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_56;
+		L_56 = Vector3_op_Subtraction_mE42023FF80067CB44A1D4A27EB7CF2B24CABB828_inline(L_54, L_55, NULL);
+		NullCheck(L_51);
+		Transform_set_position_mA1A817124BB41B685043DED2A9BA48CDF37C4156(L_51, L_56, NULL);
+	}
+
+IL_0173:
+	{
+		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/Dart.cs:82>
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_57;
+		L_57 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
+		DartZone_t5C3FEAF1B47A15B5722CE0BF51796F5B18AA760A* L_58 = V_0;
 		NullCheck(L_58);
-		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_59;
-		L_59 = Collision_get_gameObject_m846FADBCA43E1849D3FE4D5EA44C02D055A70B3E(L_58, NULL);
-		NullCheck(L_59);
-		String_t* L_60;
-		L_60 = Object_get_name_mAC2F6B897CF1303BA4249B4CB55271AFACBB6392(L_59, NULL);
-		String_t* L_61;
-		L_61 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(_stringLiteral29E5F4354543220528F47026059EBF438403E498, L_60, NULL);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_59;
+		L_59 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_58, NULL);
+		NullCheck(L_57);
+		Transform_SetParent_m6677538B60246D958DD91F931C50F969CCBB5250(L_57, L_59, NULL);
+		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/Dart.cs:83>
+		GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* L_60;
+		L_60 = GameManager_get_Instance_m076FE4D98E785B5AEE0B4C360C7857F824E7FBD0_inline(NULL);
+		DartZone_t5C3FEAF1B47A15B5722CE0BF51796F5B18AA760A* L_61 = V_0;
+		NullCheck(L_61);
+		int32_t L_62 = L_61->___score;
+		DartZone_t5C3FEAF1B47A15B5722CE0BF51796F5B18AA760A* L_63 = V_0;
+		NullCheck(L_63);
+		int32_t L_64 = L_63->___type;
+		NullCheck(L_60);
+		GameManager_RegisterThrow_m491FC5E85CF7F49B03100FA97316D7E9A2E207E1(L_60, L_62, L_64, NULL);
+		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/Dart.cs:84>
+		Collision_tBCC6AEBD9A63E6DA2E50660DAC03CDCB1FF7A9B0* L_65 = ___0_collision;
+		NullCheck(L_65);
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_66;
+		L_66 = Collision_get_gameObject_m846FADBCA43E1849D3FE4D5EA44C02D055A70B3E(L_65, NULL);
+		NullCheck(L_66);
+		String_t* L_67;
+		L_67 = Object_get_name_mAC2F6B897CF1303BA4249B4CB55271AFACBB6392(L_66, NULL);
+		String_t* L_68;
+		L_68 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(_stringLiteral29E5F4354543220528F47026059EBF438403E498, L_67, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
-		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_61, NULL);
-		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/Dart.cs:79>
+		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_68, NULL);
+		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/Dart.cs:85>
 		return;
 	}
 }
@@ -6005,8 +6088,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager__ctor_mF453CED520617BFB65C52
 	{
 		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/GameManager.cs:14>
 		__this->___currentLeg = 1;
-		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/GameManager.cs:16>
-		__this->___currentScore = ((int32_t)10);
+		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/GameManager.cs:15>
+		__this->___currentScore = ((int32_t)501);
 		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/GameManager.cs:17>
 		__this->___turnNumber = 1;
 		MonoBehaviour__ctor_m592DB0105CA0BC97AA1C5F4AD27B12D68A3B7C1E(__this, NULL);

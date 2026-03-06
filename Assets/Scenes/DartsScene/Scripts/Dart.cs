@@ -5,8 +5,10 @@ public class Dart : MonoBehaviour
 {
     public Transform tip;
     [SerializeField] private LayerMask boardLayerMask;
+    [SerializeField] private AudioClip[] stickSounds; // Sticking sound-effects
 
     private Rigidbody rb;
+    private AudioSource audioSource;
     private UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable grab;
     private bool hasStuck = false;
     private bool isThrown = false;
@@ -14,6 +16,7 @@ public class Dart : MonoBehaviour
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
+        audioSource = GetComponent<AudioSource>();
         grab = GetComponent<UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable>();
         grab.selectEntered.AddListener(OnGrab);
         grab.selectExited.AddListener(OnRelease);
@@ -59,6 +62,9 @@ public class Dart : MonoBehaviour
         if (alignment < 0.7f) return;
 
         hasStuck = true;
+        int soundIndex = Random.Range(0, stickSounds.Length);
+        audioSource.PlayOneShot(stickSounds[soundIndex]);
+
         isThrown = false;
 
         rb.linearVelocity = Vector3.zero;

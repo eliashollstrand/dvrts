@@ -12,8 +12,8 @@ public class GameManager : MonoBehaviour
     public event Action OnTurnComplete;
 
     private int currentLeg = 1;
-    // private int currentScore = 501;
-    private int currentScore = 10; // Debugging
+    private int currentScore = 501;
+    // private int currentScore = 10; // Debugging
     private int turnNumber = 1;
     private int throwNumber = 0;
     private int dartsThisTurn = 0;
