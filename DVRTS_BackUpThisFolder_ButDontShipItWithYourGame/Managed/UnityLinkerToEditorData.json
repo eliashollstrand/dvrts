@@ -517,6 +517,14 @@
             "icon": null
           },
           {
+            "name": "TrailRenderer",
+            "scenes": [
+              "Assets/Scenes/DartsScene.unity"
+            ],
+            "dependencyType": 0,
+            "icon": null
+          },
+          {
             "name": "Transform",
             "scenes": [],
             "dependencyType": 1,

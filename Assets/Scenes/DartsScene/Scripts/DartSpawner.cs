@@ -8,6 +8,7 @@ public class DartSpawner : MonoBehaviour
 
     private GameObject currentDart;
     private UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable grab;
+    private TrailRenderer trail;
 
     private void Start()
     {
@@ -17,6 +18,8 @@ public class DartSpawner : MonoBehaviour
     private void SpawnNewDart()
     {
         currentDart = Instantiate(dartPrefab, spawnPoint.position, spawnPoint.rotation);
+        trail = currentDart.GetComponentInChildren<TrailRenderer>();
+        trail.enabled = false;
 
         grab = currentDart.GetComponent<UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable>();
         grab.selectEntered.AddListener(OnDartGrabbed);

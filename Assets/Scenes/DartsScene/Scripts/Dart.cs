@@ -9,6 +9,7 @@ public class Dart : MonoBehaviour
 
     private Rigidbody rb;
     private AudioSource audioSource;
+    private TrailRenderer trail; // Trail Renderer from Trail child
     private UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable grab;
     private bool hasStuck = false;
     private bool isThrown = false;
@@ -17,6 +18,8 @@ public class Dart : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         audioSource = GetComponent<AudioSource>();
+        trail = GetComponentInChildren<TrailRenderer>();
+
         grab = GetComponent<UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable>();
         grab.selectEntered.AddListener(OnGrab);
         grab.selectExited.AddListener(OnRelease);
@@ -35,13 +38,17 @@ public class Dart : MonoBehaviour
         rb.isKinematic = false;
         hasStuck = false;
         isThrown = false;
+        trail.enabled = false;
     }
 
     private void OnRelease(SelectExitEventArgs args)
     {
         isThrown = true;
         this.tag = "ThrownDart";
-    }
+
+        trail.enabled = true;
+        trail.Clear() // Restart trail from new position
+;    }
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -62,6 +69,9 @@ public class Dart : MonoBehaviour
         if (alignment < 0.7f) return;
 
         hasStuck = true;
+        trail.enabled = false;
+        
+        // Play sound effect
         int soundIndex = Random.Range(0, stickSounds.Length);
         audioSource.PlayOneShot(stickSounds[soundIndex]);
 
