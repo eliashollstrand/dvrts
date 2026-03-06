@@ -1,0 +1,18 @@
+# Unity shader files
+*.shader linguist-vendored
+*.hlsl linguist-vendored
+*.cginc linguist-vendored
+
+# Unity metadata and configs
+*.meta linguist-vendored
+*.asset linguist-vendored
+*.prefab linguist-vendored
+*.unity linguist-vendored
+*.mat linguist-vendored
+*.anim linguist-vendored
+*.controller linguist-vendored
+
+# Build or config files
+*.json linguist-vendored
+*.yaml linguist-vendored
+*.yml linguist-vendored
