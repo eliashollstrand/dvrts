@@ -45,7 +45,7 @@ public class ScoreboardUI : MonoBehaviour
         scoreText.text = score.ToString();
         legText.text = $"LEG {leg}";
         turnText.text = $"TURN {turn}";
-        dartsText.text = $"DARTS {darts}/3";
+        dartsText.text = $"DART {darts + 1}/3"; // darts goes from 0 - 2
     }
 
     private void ShowBust()
