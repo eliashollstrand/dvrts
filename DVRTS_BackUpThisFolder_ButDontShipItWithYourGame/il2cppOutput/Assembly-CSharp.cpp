@@ -6102,6 +6102,8 @@ IL_0040:
 // Method Definition Index: 81344
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_StartNewTurn_m59857F649D59D627C4D386CDEB5DC322E98391AB (GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* __this, const RuntimeMethod* method) 
 {
+	Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* G_B4_0 = NULL;
+	Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* G_B3_0 = NULL;
 	{
 		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/GameManager.cs:111>
 		bool L_0 = __this->___newTurnPending;
@@ -6122,6 +6124,24 @@ IL_0009:
 		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/GameManager.cs:114>
 		GameManager_DespawnDarts_mF6C555DDF04EA34CA4936BC49C7DE768204B0520(__this, NULL);
 		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/GameManager.cs:115>
+		Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* L_1 = __this->___OnTurnComplete;
+		Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* L_2 = L_1;
+		if (L_2)
+		{
+			G_B4_0 = L_2;
+			goto IL_0021;
+		}
+		G_B3_0 = L_2;
+	}
+	{
+		return;
+	}
+
+IL_0021:
+	{
+		NullCheck(G_B4_0);
+		Action_Invoke_m7126A54DACA72B845424072887B5F3A51FC3808E_inline(G_B4_0, NULL);
+		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/GameManager.cs:116>
 		return;
 	}
 }
@@ -6138,10 +6158,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_DespawnDarts_mF6C555DDF04EA3
 	GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* V_0 = NULL;
 	int32_t V_1 = 0;
 	{
-		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/GameManager.cs:119>
+		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/GameManager.cs:120>
 		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_0;
 		L_0 = GameObject_FindGameObjectsWithTag_mB8AA805DA664EF0221BB338446014F662771B4E3(_stringLiteral450E07D10C716C8D3A068FEC693190DA584C87CC, NULL);
-		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/GameManager.cs:120>
+		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/GameManager.cs:121>
 		V_0 = L_0;
 		V_1 = 0;
 		goto IL_001b;
@@ -6149,13 +6169,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_DespawnDarts_mF6C555DDF04EA3
 
 IL_000f:
 	{
-		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/GameManager.cs:120>
+		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/GameManager.cs:121>
 		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_1 = V_0;
 		int32_t L_2 = V_1;
 		NullCheck(L_1);
 		int32_t L_3 = L_2;
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_4 = (L_1)->GetAt(static_cast<il2cpp_array_size_t>(L_3));
-		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/GameManager.cs:122>
+		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/GameManager.cs:123>
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		Object_Destroy_mE97D0A766419A81296E8D4E5C23D01D3FE91ACBB(L_4, NULL);
 		int32_t L_5 = V_1;
@@ -6164,7 +6184,7 @@ IL_000f:
 
 IL_001b:
 	{
-		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/GameManager.cs:120>
+		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/GameManager.cs:121>
 		int32_t L_6 = V_1;
 		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_7 = V_0;
 		NullCheck(L_7);
@@ -6174,7 +6194,7 @@ IL_001b:
 		}
 	}
 	{
-		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/GameManager.cs:124>
+		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/GameManager.cs:125>
 		return;
 	}
 }
@@ -6183,31 +6203,29 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_EndTurn_mF03D8F635823D164100
 {
 	Action_4_t226D79A062EB6BFF3E2C7E7853FC37BB00B95A80* G_B2_0 = NULL;
 	Action_4_t226D79A062EB6BFF3E2C7E7853FC37BB00B95A80* G_B1_0 = NULL;
-	Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* G_B5_0 = NULL;
-	Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* G_B4_0 = NULL;
 	{
-		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/GameManager.cs:128>
-		__this->___newTurnPending = (bool)1;
 		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/GameManager.cs:129>
+		__this->___newTurnPending = (bool)1;
+		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/GameManager.cs:130>
 		int32_t L_0 = __this->___turnNumber;
 		__this->___turnNumber = ((int32_t)il2cpp_codegen_add(L_0, 1));
-		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/GameManager.cs:130>
-		__this->___dartsThisTurn = 0;
 		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/GameManager.cs:131>
+		__this->___dartsThisTurn = 0;
+		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/GameManager.cs:132>
 		Action_4_t226D79A062EB6BFF3E2C7E7853FC37BB00B95A80* L_1 = __this->___OnStateChanged;
 		Action_4_t226D79A062EB6BFF3E2C7E7853FC37BB00B95A80* L_2 = L_1;
 		if (L_2)
 		{
 			G_B2_0 = L_2;
-			goto IL_0028;
+			goto IL_0027;
 		}
 		G_B1_0 = L_2;
 	}
 	{
-		goto IL_0045;
+		return;
 	}
 
-IL_0028:
+IL_0027:
 	{
 		int32_t L_3 = __this->___currentScore;
 		int32_t L_4 = __this->___currentLeg;
@@ -6215,28 +6233,6 @@ IL_0028:
 		int32_t L_6 = __this->___dartsThisTurn;
 		NullCheck(G_B2_0);
 		Action_4_Invoke_m2948D832F4EDF9942D36D54C2C9990D3C8761723_inline(G_B2_0, L_3, L_4, L_5, L_6, NULL);
-	}
-
-IL_0045:
-	{
-		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/GameManager.cs:132>
-		Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* L_7 = __this->___OnTurnComplete;
-		Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* L_8 = L_7;
-		if (L_8)
-		{
-			G_B5_0 = L_8;
-			goto IL_0050;
-		}
-		G_B4_0 = L_8;
-	}
-	{
-		return;
-	}
-
-IL_0050:
-	{
-		NullCheck(G_B5_0);
-		Action_Invoke_m7126A54DACA72B845424072887B5F3A51FC3808E_inline(G_B5_0, NULL);
 		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/GameManager.cs:133>
 		return;
 	}
@@ -6247,8 +6243,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager__ctor_mF453CED520617BFB65C52
 	{
 		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/GameManager.cs:14>
 		__this->___currentLeg = 1;
-		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/GameManager.cs:15>
-		__this->___currentScore = ((int32_t)501);
+		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/GameManager.cs:16>
+		__this->___currentScore = ((int32_t)10);
 		//<source_info:/Volumes/Unity Projects/dvrts/Assets/Scenes/DartsScene/Scripts/GameManager.cs:17>
 		__this->___turnNumber = 1;
 		MonoBehaviour__ctor_m592DB0105CA0BC97AA1C5F4AD27B12D68A3B7C1E(__this, NULL);

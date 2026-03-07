@@ -1,18 +1,16 @@
-# Unity shader files
-*.shader linguist-vendored
-*.hlsl linguist-vendored
-*.cginc linguist-vendored
+# Keep C# as code
+*.cs linguist-language=C#
 
-# Unity metadata and configs
-*.meta linguist-vendored
-*.asset linguist-vendored
-*.prefab linguist-vendored
-*.unity linguist-vendored
-*.mat linguist-vendored
-*.anim linguist-vendored
-*.controller linguist-vendored
+# Unity/YAML assets (exclude from stats)
+*.meta linguist-generated
+*.unity linguist-generated
+*.prefab linguist-generated
+*.asset linguist-generated
+*.mat linguist-generated
+*.anim linguist-generated
+*.controller linguist-generated
 
-# Build or config files
-*.json linguist-vendored
-*.yaml linguist-vendored
-*.yml linguist-vendored
+# Project/config/docs (exclude from stats)
+ProjectSettings/** linguist-generated
+Packages/packages-lock.json linguist-generated
+*.md linguist-documentation

@@ -112,6 +112,7 @@ public class GameManager : MonoBehaviour
 
         newTurnPending = false;
         DespawnDarts();
+        OnTurnComplete?.Invoke();
     }
 
     private void DespawnDarts()
@@ -129,6 +130,5 @@ public class GameManager : MonoBehaviour
         turnNumber++;
         dartsThisTurn = 0;
         OnStateChanged?.Invoke(currentScore, currentLeg, turnNumber, dartsThisTurn);
-        OnTurnComplete?.Invoke();
     }
 }
